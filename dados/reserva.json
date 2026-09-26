@@ -1,0 +1,6 @@
+[
+  {"pergunta": "Quando se inicia a vigência?", "esperado": "prazo", "categoria": "parafrase"},
+  {"pergunta": "Em que dia vence?", "esperado": "pagamento", "categoria": "parafrase"},
+  {"pergunta": "Existe penalidade por rescisão?", "esperado": null, "categoria": "trecho_insuficiente"},
+  {"pergunta": "Quem assina o contrato?", "esperado": null, "categoria": "ausente"}
+]
