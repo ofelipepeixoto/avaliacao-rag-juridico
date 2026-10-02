@@ -1,0 +1,26 @@
+{
+  "name": "avaliacao-rag-juridico",
+  "version": "1.0.0",
+  "description": "Experimento autoral para medir a **seleção de trechos** de um contrato fictício. Não usa dados de clientes, modelo de IA, embeddings ou API. A avaliação do texto gerado por um modelo será uma etapa distinta; este repositório ainda não é RAG completo.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test promptfoo/provider.test.cjs",
+    "eval:offline": "sh promptfoo/run_offline.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ofelipepeixoto/avaliacao-rag-juridico.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ofelipepeixoto/avaliacao-rag-juridico/issues"
+  },
+  "homepage": "https://github.com/ofelipepeixoto/avaliacao-rag-juridico#readme",
+  "devDependencies": {
+    "promptfoo": "0.123.1"
+  },
+  "private": true
+}
