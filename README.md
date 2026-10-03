@@ -30,3 +30,11 @@ As equivalências `começa → início` e `cancelar → rescisão` foram escolhi
 - [OpenAI Evals](https://github.com/openai/evals).
 
 O código e os dados deste repositório são originais; as referências foram usadas para orientar o método.
+
+## Evidências e Semantica opcional
+
+Novo experimento isolado em [experiments/semantica](experiments/semantica/README.md),
+com contratos autorais, recibos e motor simbólico opcional fixado. O baseline
+lexical acima permanece independente. Veja [radar-evidence-kit](packages/radar-evidence-kit/README.md)
+e a [decisão de extração](docs/adr/0001-evidence-kit.md). A elegibilidade de
+citação não comprova a verdade jurídica ou o suporte semântico de uma resposta.
