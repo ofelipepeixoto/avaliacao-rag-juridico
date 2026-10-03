@@ -1,0 +1,827 @@
+{
+  "baseline_original": {
+    "desenvolvimento.json": {
+      "equivalences": {
+        "acertos": 7,
+        "casos": [
+          {
+            "acertou": true,
+            "categoria": "direta",
+            "esperado": "objeto",
+            "obtido": "objeto",
+            "pergunta": "Qual é o objeto?"
+          },
+          {
+            "acertou": true,
+            "categoria": "direta",
+            "esperado": "prazo",
+            "obtido": "prazo",
+            "pergunta": "Qual é o prazo?"
+          },
+          {
+            "acertou": true,
+            "categoria": "parafrase",
+            "esperado": "prazo",
+            "obtido": "prazo",
+            "pergunta": "Quando começa?"
+          },
+          {
+            "acertou": true,
+            "categoria": "direta",
+            "esperado": "pagamento",
+            "obtido": "pagamento",
+            "pergunta": "Qual é o pagamento?"
+          },
+          {
+            "acertou": true,
+            "categoria": "parafrase",
+            "esperado": "rescisao",
+            "obtido": "rescisao",
+            "pergunta": "Como cancelar?"
+          },
+          {
+            "acertou": true,
+            "categoria": "ausente",
+            "esperado": null,
+            "obtido": null,
+            "pergunta": "Qual é a cor do logotipo?"
+          },
+          {
+            "acertou": false,
+            "categoria": "trecho_insuficiente",
+            "esperado": null,
+            "obtido": "rescisao",
+            "pergunta": "Quanto é a multa de rescisão?"
+          },
+          {
+            "acertou": true,
+            "categoria": "direta",
+            "esperado": "rescisao",
+            "obtido": "rescisao",
+            "pergunta": "Qual a antecedência da rescisão?"
+          }
+        ],
+        "por_categoria": {
+          "ausente": {
+            "acertos": 1,
+            "total": 1
+          },
+          "direta": {
+            "acertos": 4,
+            "total": 4
+          },
+          "parafrase": {
+            "acertos": 2,
+            "total": 2
+          },
+          "trecho_insuficiente": {
+            "acertos": 0,
+            "total": 1
+          }
+        },
+        "total": 8
+      },
+      "literal": {
+        "acertos": 5,
+        "casos": [
+          {
+            "acertou": true,
+            "categoria": "direta",
+            "esperado": "objeto",
+            "obtido": "objeto",
+            "pergunta": "Qual é o objeto?"
+          },
+          {
+            "acertou": true,
+            "categoria": "direta",
+            "esperado": "prazo",
+            "obtido": "prazo",
+            "pergunta": "Qual é o prazo?"
+          },
+          {
+            "acertou": false,
+            "categoria": "parafrase",
+            "esperado": "prazo",
+            "obtido": null,
+            "pergunta": "Quando começa?"
+          },
+          {
+            "acertou": true,
+            "categoria": "direta",
+            "esperado": "pagamento",
+            "obtido": "pagamento",
+            "pergunta": "Qual é o pagamento?"
+          },
+          {
+            "acertou": false,
+            "categoria": "parafrase",
+            "esperado": "rescisao",
+            "obtido": null,
+            "pergunta": "Como cancelar?"
+          },
+          {
+            "acertou": true,
+            "categoria": "ausente",
+            "esperado": null,
+            "obtido": null,
+            "pergunta": "Qual é a cor do logotipo?"
+          },
+          {
+            "acertou": false,
+            "categoria": "trecho_insuficiente",
+            "esperado": null,
+            "obtido": "rescisao",
+            "pergunta": "Quanto é a multa de rescisão?"
+          },
+          {
+            "acertou": true,
+            "categoria": "direta",
+            "esperado": "rescisao",
+            "obtido": "rescisao",
+            "pergunta": "Qual a antecedência da rescisão?"
+          }
+        ],
+        "por_categoria": {
+          "ausente": {
+            "acertos": 1,
+            "total": 1
+          },
+          "direta": {
+            "acertos": 4,
+            "total": 4
+          },
+          "parafrase": {
+            "acertos": 0,
+            "total": 2
+          },
+          "trecho_insuficiente": {
+            "acertos": 0,
+            "total": 1
+          }
+        },
+        "total": 8
+      }
+    },
+    "reserva.json": {
+      "equivalences": {
+        "acertos": 2,
+        "casos": [
+          {
+            "acertou": false,
+            "categoria": "parafrase",
+            "esperado": "prazo",
+            "obtido": null,
+            "pergunta": "Quando se inicia a vigência?"
+          },
+          {
+            "acertou": true,
+            "categoria": "parafrase",
+            "esperado": "pagamento",
+            "obtido": "pagamento",
+            "pergunta": "Em que dia vence?"
+          },
+          {
+            "acertou": false,
+            "categoria": "trecho_insuficiente",
+            "esperado": null,
+            "obtido": "rescisao",
+            "pergunta": "Existe penalidade por rescisão?"
+          },
+          {
+            "acertou": true,
+            "categoria": "ausente",
+            "esperado": null,
+            "obtido": null,
+            "pergunta": "Quem assina o contrato?"
+          }
+        ],
+        "por_categoria": {
+          "ausente": {
+            "acertos": 1,
+            "total": 1
+          },
+          "parafrase": {
+            "acertos": 1,
+            "total": 2
+          },
+          "trecho_insuficiente": {
+            "acertos": 0,
+            "total": 1
+          }
+        },
+        "total": 4
+      },
+      "literal": {
+        "acertos": 2,
+        "casos": [
+          {
+            "acertou": false,
+            "categoria": "parafrase",
+            "esperado": "prazo",
+            "obtido": null,
+            "pergunta": "Quando se inicia a vigência?"
+          },
+          {
+            "acertou": true,
+            "categoria": "parafrase",
+            "esperado": "pagamento",
+            "obtido": "pagamento",
+            "pergunta": "Em que dia vence?"
+          },
+          {
+            "acertou": false,
+            "categoria": "trecho_insuficiente",
+            "esperado": null,
+            "obtido": "rescisao",
+            "pergunta": "Existe penalidade por rescisão?"
+          },
+          {
+            "acertou": true,
+            "categoria": "ausente",
+            "esperado": null,
+            "obtido": null,
+            "pergunta": "Quem assina o contrato?"
+          }
+        ],
+        "por_categoria": {
+          "ausente": {
+            "acertos": 1,
+            "total": 1
+          },
+          "parafrase": {
+            "acertos": 1,
+            "total": 2
+          },
+          "trecho_insuficiente": {
+            "acertos": 0,
+            "total": 1
+          }
+        },
+        "total": 4
+      }
+    }
+  },
+  "cases": [
+    {
+      "category": "parafrase",
+      "claim_annotation_only": "A vigência começa em janeiro de 2026.",
+      "core_contract_correct": true,
+      "core_reasons": [],
+      "core_supported": true,
+      "engine_input_valid": true,
+      "expected_contract_supported": true,
+      "id": "parafrase",
+      "lexical_equivalences_id": "prazo",
+      "lexical_literal_id": null,
+      "question": "Quando começa?",
+      "semantic_counterexample_annotation": false,
+      "semantica": {
+        "bundle_id": "e8ee07a5e724be4d96a7a35dcc2af62cc6ecb0438a0b683e53cb36c8f85fa3fb",
+        "claim_scope": "citation_contract_only",
+        "derived_claims": [
+          "BundleSupported(e8ee07a5e724be4d96a7a35dcc2af62cc6ecb0438a0b683e53cb36c8f85fa3fb)",
+          "CitationSupported(7ecdb1ce2cdbb5b001f37cc21cff9d3ac2243ef8970c255a4f99ab7169135994)"
+        ],
+        "engine_version": "0.7.0",
+        "evaluation_completed": true,
+        "evidence_ids": [
+          "7ecdb1ce2cdbb5b001f37cc21cff9d3ac2243ef8970c255a4f99ab7169135994"
+        ],
+        "expected_snapshot": "a1a8404e20bc146b481dad65cbe5dcccddae84ab",
+        "reasons": [],
+        "ruleset_version": "radar-citation-support-v1",
+        "supported": true,
+        "verified_modules": [
+          "__init__.py",
+          "reasoning/_rule_matching.py",
+          "reasoning/_truth_maintenance_checkpoint.py",
+          "reasoning/_truth_maintenance_validation.py",
+          "reasoning/reasoner.py",
+          "reasoning/truth_maintenance.py",
+          "reasoning/truth_maintenance_types.py",
+          "utils/exceptions.py",
+          "utils/logging.py",
+          "utils/progress_tracker.py"
+        ]
+      }
+    },
+    {
+      "category": "trecho_insuficiente",
+      "claim_annotation_only": "A multa é de cem reais.",
+      "core_contract_correct": true,
+      "core_reasons": [],
+      "core_supported": true,
+      "engine_input_valid": true,
+      "expected_contract_supported": true,
+      "id": "trecho-insuficiente",
+      "lexical_equivalences_id": "rescisao",
+      "lexical_literal_id": "rescisao",
+      "question": "Quanto é a multa de rescisão?",
+      "semantic_counterexample_annotation": true,
+      "semantica": {
+        "bundle_id": "db11f1b103625e9579172fd1ec3d440786683114a63346259ca0c589d935a54f",
+        "claim_scope": "citation_contract_only",
+        "derived_claims": [
+          "BundleSupported(db11f1b103625e9579172fd1ec3d440786683114a63346259ca0c589d935a54f)",
+          "CitationSupported(41e87331a258251fc65502395553aaa24fb8451823f7ef98e3dbbbc1a8dbf863)"
+        ],
+        "engine_version": "0.7.0",
+        "evaluation_completed": true,
+        "evidence_ids": [
+          "41e87331a258251fc65502395553aaa24fb8451823f7ef98e3dbbbc1a8dbf863"
+        ],
+        "expected_snapshot": "a1a8404e20bc146b481dad65cbe5dcccddae84ab",
+        "reasons": [],
+        "ruleset_version": "radar-citation-support-v1",
+        "supported": true,
+        "verified_modules": [
+          "__init__.py",
+          "reasoning/_rule_matching.py",
+          "reasoning/_truth_maintenance_checkpoint.py",
+          "reasoning/_truth_maintenance_validation.py",
+          "reasoning/reasoner.py",
+          "reasoning/truth_maintenance.py",
+          "reasoning/truth_maintenance_types.py",
+          "utils/exceptions.py",
+          "utils/logging.py",
+          "utils/progress_tracker.py"
+        ]
+      }
+    },
+    {
+      "category": "negacao",
+      "claim_annotation_only": "Há exclusividade.",
+      "core_contract_correct": true,
+      "core_reasons": [],
+      "core_supported": true,
+      "engine_input_valid": true,
+      "expected_contract_supported": true,
+      "id": "negacao",
+      "lexical_equivalences_id": null,
+      "lexical_literal_id": null,
+      "question": "Existe exclusividade?",
+      "semantic_counterexample_annotation": true,
+      "semantica": {
+        "bundle_id": "f4442292cc927ff83f8fce5b7e26b8d80c6e77b0e6ced37ec42237adbfc3818c",
+        "claim_scope": "citation_contract_only",
+        "derived_claims": [
+          "BundleSupported(f4442292cc927ff83f8fce5b7e26b8d80c6e77b0e6ced37ec42237adbfc3818c)",
+          "CitationSupported(b9a18b3f1da1ba889c66bd4262fe03dd89a1bc3eabd552cc4b0fde43d89ea457)"
+        ],
+        "engine_version": "0.7.0",
+        "evaluation_completed": true,
+        "evidence_ids": [
+          "b9a18b3f1da1ba889c66bd4262fe03dd89a1bc3eabd552cc4b0fde43d89ea457"
+        ],
+        "expected_snapshot": "a1a8404e20bc146b481dad65cbe5dcccddae84ab",
+        "reasons": [],
+        "ruleset_version": "radar-citation-support-v1",
+        "supported": true,
+        "verified_modules": [
+          "__init__.py",
+          "reasoning/_rule_matching.py",
+          "reasoning/_truth_maintenance_checkpoint.py",
+          "reasoning/_truth_maintenance_validation.py",
+          "reasoning/reasoner.py",
+          "reasoning/truth_maintenance.py",
+          "reasoning/truth_maintenance_types.py",
+          "utils/exceptions.py",
+          "utils/logging.py",
+          "utils/progress_tracker.py"
+        ]
+      }
+    },
+    {
+      "category": "valores",
+      "claim_annotation_only": "O pagamento é de cinco mil reais por mês.",
+      "core_contract_correct": true,
+      "core_reasons": [],
+      "core_supported": true,
+      "engine_input_valid": true,
+      "expected_contract_supported": true,
+      "id": "valor-trocado",
+      "lexical_equivalences_id": "pagamento",
+      "lexical_literal_id": "pagamento",
+      "question": "Qual é o pagamento?",
+      "semantic_counterexample_annotation": true,
+      "semantica": {
+        "bundle_id": "a19219222a0ed31987ca0eff71ac7f50c01de6a06f5e10fe9dd69728c13cb93a",
+        "claim_scope": "citation_contract_only",
+        "derived_claims": [
+          "BundleSupported(a19219222a0ed31987ca0eff71ac7f50c01de6a06f5e10fe9dd69728c13cb93a)",
+          "CitationSupported(357ffa69d50b4c68961434ce57d566bac27fbf601fe43de8552cbb564353fa32)"
+        ],
+        "engine_version": "0.7.0",
+        "evaluation_completed": true,
+        "evidence_ids": [
+          "357ffa69d50b4c68961434ce57d566bac27fbf601fe43de8552cbb564353fa32"
+        ],
+        "expected_snapshot": "a1a8404e20bc146b481dad65cbe5dcccddae84ab",
+        "reasons": [],
+        "ruleset_version": "radar-citation-support-v1",
+        "supported": true,
+        "verified_modules": [
+          "__init__.py",
+          "reasoning/_rule_matching.py",
+          "reasoning/_truth_maintenance_checkpoint.py",
+          "reasoning/_truth_maintenance_validation.py",
+          "reasoning/reasoner.py",
+          "reasoning/truth_maintenance.py",
+          "reasoning/truth_maintenance_types.py",
+          "utils/exceptions.py",
+          "utils/logging.py",
+          "utils/progress_tracker.py"
+        ]
+      }
+    },
+    {
+      "category": "temporal",
+      "claim_annotation_only": "A vigência é de doze meses.",
+      "core_contract_correct": true,
+      "core_reasons": [
+        "stale_revision"
+      ],
+      "core_supported": false,
+      "engine_input_valid": true,
+      "expected_contract_supported": false,
+      "id": "revisao-antiga",
+      "lexical_equivalences_id": "prazo",
+      "lexical_literal_id": "prazo",
+      "question": "Qual é o prazo atual?",
+      "semantic_counterexample_annotation": false,
+      "semantica": {
+        "bundle_id": "24f69b57540c363e5b6c75b19d81d6536f6e446f1fa01b43b676ac4a4034f200",
+        "claim_scope": "citation_contract_only",
+        "derived_claims": [],
+        "engine_version": "0.7.0",
+        "evaluation_completed": true,
+        "evidence_ids": [
+          "7828b33de097fd4146d89c179f8f70b1fbfacf198f59e70678a0acd982d8bd6b"
+        ],
+        "expected_snapshot": "a1a8404e20bc146b481dad65cbe5dcccddae84ab",
+        "reasons": [
+          "stale_revision"
+        ],
+        "ruleset_version": "radar-citation-support-v1",
+        "supported": false,
+        "verified_modules": [
+          "__init__.py",
+          "reasoning/_rule_matching.py",
+          "reasoning/_truth_maintenance_checkpoint.py",
+          "reasoning/_truth_maintenance_validation.py",
+          "reasoning/reasoner.py",
+          "reasoning/truth_maintenance.py",
+          "reasoning/truth_maintenance_types.py",
+          "utils/exceptions.py",
+          "utils/logging.py",
+          "utils/progress_tracker.py"
+        ]
+      }
+    },
+    {
+      "category": "conflito",
+      "claim_annotation_only": "O valor mensal está confirmado sem conflito.",
+      "core_contract_correct": true,
+      "core_reasons": [],
+      "core_supported": true,
+      "engine_input_valid": true,
+      "expected_contract_supported": true,
+      "id": "conflito-fontes",
+      "lexical_equivalences_id": null,
+      "lexical_literal_id": null,
+      "question": "Qual é o valor mensal?",
+      "semantic_counterexample_annotation": true,
+      "semantica": {
+        "bundle_id": "7d56667d4461f91063288b8d3e7bc8eb87252f4be901f0c150434992956e1759",
+        "claim_scope": "citation_contract_only",
+        "derived_claims": [
+          "BundleSupported(7d56667d4461f91063288b8d3e7bc8eb87252f4be901f0c150434992956e1759)",
+          "CitationSupported(3ceae49bf3816147e1c7668bf3860fac9da9ed63b0354ee644d677137ac70bb0)",
+          "CitationSupported(8337e0bdd6be2dbd2f4a150cb2c9e96db1eb3d936bef461188ed0f7600269b63)"
+        ],
+        "engine_version": "0.7.0",
+        "evaluation_completed": true,
+        "evidence_ids": [
+          "3ceae49bf3816147e1c7668bf3860fac9da9ed63b0354ee644d677137ac70bb0",
+          "8337e0bdd6be2dbd2f4a150cb2c9e96db1eb3d936bef461188ed0f7600269b63"
+        ],
+        "expected_snapshot": "a1a8404e20bc146b481dad65cbe5dcccddae84ab",
+        "reasons": [],
+        "ruleset_version": "radar-citation-support-v1",
+        "supported": true,
+        "verified_modules": [
+          "__init__.py",
+          "reasoning/_rule_matching.py",
+          "reasoning/_truth_maintenance_checkpoint.py",
+          "reasoning/_truth_maintenance_validation.py",
+          "reasoning/reasoner.py",
+          "reasoning/truth_maintenance.py",
+          "reasoning/truth_maintenance_types.py",
+          "utils/exceptions.py",
+          "utils/logging.py",
+          "utils/progress_tracker.py"
+        ]
+      }
+    },
+    {
+      "category": "unreviewed",
+      "claim_annotation_only": "O objeto foi revisado.",
+      "core_contract_correct": true,
+      "core_reasons": [
+        "review_pending"
+      ],
+      "core_supported": false,
+      "engine_input_valid": true,
+      "expected_contract_supported": false,
+      "id": "sem-revisao",
+      "lexical_equivalences_id": "objeto",
+      "lexical_literal_id": "objeto",
+      "question": "Qual é o objeto?",
+      "semantic_counterexample_annotation": false,
+      "semantica": {
+        "bundle_id": "9a35c43e6b6e832e857edc87115f390b5b0fbf4e02e853feadcba4040db5553c",
+        "claim_scope": "citation_contract_only",
+        "derived_claims": [],
+        "engine_version": "0.7.0",
+        "evaluation_completed": true,
+        "evidence_ids": [
+          "d5ae9484375e68ada91cecafec050216b60ea9ffd96604ba835f7550b372a2be"
+        ],
+        "expected_snapshot": "a1a8404e20bc146b481dad65cbe5dcccddae84ab",
+        "reasons": [
+          "review_pending"
+        ],
+        "ruleset_version": "radar-citation-support-v1",
+        "supported": false,
+        "verified_modules": [
+          "__init__.py",
+          "reasoning/_rule_matching.py",
+          "reasoning/_truth_maintenance_checkpoint.py",
+          "reasoning/_truth_maintenance_validation.py",
+          "reasoning/reasoner.py",
+          "reasoning/truth_maintenance.py",
+          "reasoning/truth_maintenance_types.py",
+          "utils/exceptions.py",
+          "utils/logging.py",
+          "utils/progress_tracker.py"
+        ]
+      }
+    },
+    {
+      "category": "review_rejected",
+      "claim_annotation_only": "A citação está aprovada.",
+      "core_contract_correct": true,
+      "core_reasons": [
+        "review_rejected"
+      ],
+      "core_supported": false,
+      "engine_input_valid": true,
+      "expected_contract_supported": false,
+      "id": "rejeitada",
+      "lexical_equivalences_id": "objeto",
+      "lexical_literal_id": "objeto",
+      "question": "Qual é o objeto?",
+      "semantic_counterexample_annotation": false,
+      "semantica": {
+        "bundle_id": "5f644ad937308098889b0259da034f82f8bc171dff8d180ad03ed2a046044315",
+        "claim_scope": "citation_contract_only",
+        "derived_claims": [],
+        "engine_version": "0.7.0",
+        "evaluation_completed": true,
+        "evidence_ids": [
+          "3fa283ad4660d1584af54b59f5520280cffcb570f612c8d852fcee93d2bb1142"
+        ],
+        "expected_snapshot": "a1a8404e20bc146b481dad65cbe5dcccddae84ab",
+        "reasons": [
+          "review_rejected"
+        ],
+        "ruleset_version": "radar-citation-support-v1",
+        "supported": false,
+        "verified_modules": [
+          "__init__.py",
+          "reasoning/_rule_matching.py",
+          "reasoning/_truth_maintenance_checkpoint.py",
+          "reasoning/_truth_maintenance_validation.py",
+          "reasoning/reasoner.py",
+          "reasoning/truth_maintenance.py",
+          "reasoning/truth_maintenance_types.py",
+          "utils/exceptions.py",
+          "utils/logging.py",
+          "utils/progress_tracker.py"
+        ]
+      }
+    },
+    {
+      "category": "identity",
+      "claim_annotation_only": "A identidade do revisor foi verificada.",
+      "core_contract_correct": true,
+      "core_reasons": [
+        "reviewer_identity_unverified"
+      ],
+      "core_supported": false,
+      "engine_input_valid": true,
+      "expected_contract_supported": false,
+      "id": "identidade-nao-verificada",
+      "lexical_equivalences_id": "objeto",
+      "lexical_literal_id": "objeto",
+      "question": "Qual é o objeto?",
+      "semantic_counterexample_annotation": false,
+      "semantica": {
+        "bundle_id": "6c7daaca86c1f21fd86177e208c5bf70828b0644de137a06f511370836908f3a",
+        "claim_scope": "citation_contract_only",
+        "derived_claims": [],
+        "engine_version": "0.7.0",
+        "evaluation_completed": true,
+        "evidence_ids": [
+          "467074f381c923eedd59088d5f2a6b2995a81be1e33c22c601376e733a5368b7"
+        ],
+        "expected_snapshot": "a1a8404e20bc146b481dad65cbe5dcccddae84ab",
+        "reasons": [
+          "reviewer_identity_unverified"
+        ],
+        "ruleset_version": "radar-citation-support-v1",
+        "supported": false,
+        "verified_modules": [
+          "__init__.py",
+          "reasoning/_rule_matching.py",
+          "reasoning/_truth_maintenance_checkpoint.py",
+          "reasoning/_truth_maintenance_validation.py",
+          "reasoning/reasoner.py",
+          "reasoning/truth_maintenance.py",
+          "reasoning/truth_maintenance_types.py",
+          "utils/exceptions.py",
+          "utils/logging.py",
+          "utils/progress_tracker.py"
+        ]
+      }
+    },
+    {
+      "category": "unknown_citation",
+      "claim_annotation_only": "A cláusula existe no escopo.",
+      "core_contract_correct": true,
+      "core_reasons": [
+        "unknown_document"
+      ],
+      "core_supported": false,
+      "engine_input_valid": true,
+      "expected_contract_supported": false,
+      "id": "citacao-desconhecida",
+      "lexical_equivalences_id": null,
+      "lexical_literal_id": null,
+      "question": "Quem assina?",
+      "semantic_counterexample_annotation": false,
+      "semantica": {
+        "bundle_id": "cd34b974f2846f13f4b784517265b4e3669ff5f083bc21253be4909803b5095e",
+        "claim_scope": "citation_contract_only",
+        "derived_claims": [],
+        "engine_version": "0.7.0",
+        "evaluation_completed": true,
+        "evidence_ids": [
+          "800efd97870f13a2c9e976fd7022b580025e68b8bce85137530077f5196ce65c"
+        ],
+        "expected_snapshot": "a1a8404e20bc146b481dad65cbe5dcccddae84ab",
+        "reasons": [
+          "unknown_document"
+        ],
+        "ruleset_version": "radar-citation-support-v1",
+        "supported": false,
+        "verified_modules": [
+          "__init__.py",
+          "reasoning/_rule_matching.py",
+          "reasoning/_truth_maintenance_checkpoint.py",
+          "reasoning/_truth_maintenance_validation.py",
+          "reasoning/reasoner.py",
+          "reasoning/truth_maintenance.py",
+          "reasoning/truth_maintenance_types.py",
+          "utils/exceptions.py",
+          "utils/logging.py",
+          "utils/progress_tracker.py"
+        ]
+      }
+    },
+    {
+      "category": "tenant",
+      "claim_annotation_only": "A fonte pertence ao tenant atual.",
+      "core_contract_correct": true,
+      "core_reasons": [
+        "tenant_scope_mismatch"
+      ],
+      "core_supported": false,
+      "engine_input_valid": true,
+      "expected_contract_supported": false,
+      "id": "outro-tenant",
+      "lexical_equivalences_id": "objeto",
+      "lexical_literal_id": "objeto",
+      "question": "Qual é o objeto?",
+      "semantic_counterexample_annotation": false,
+      "semantica": {
+        "bundle_id": "e20a3176c3488cf97814700f4adfff0b1c0ff35e8983b5c4938c4ad33e98dc84",
+        "claim_scope": "citation_contract_only",
+        "derived_claims": [],
+        "engine_version": "0.7.0",
+        "evaluation_completed": true,
+        "evidence_ids": [
+          "6c209f27d7dfe7bbc0375fcd18aa8745e8bc16a47ae435beedde58f9f2e30dd0"
+        ],
+        "expected_snapshot": "a1a8404e20bc146b481dad65cbe5dcccddae84ab",
+        "reasons": [
+          "tenant_scope_mismatch"
+        ],
+        "ruleset_version": "radar-citation-support-v1",
+        "supported": false,
+        "verified_modules": [
+          "__init__.py",
+          "reasoning/_rule_matching.py",
+          "reasoning/_truth_maintenance_checkpoint.py",
+          "reasoning/_truth_maintenance_validation.py",
+          "reasoning/reasoner.py",
+          "reasoning/truth_maintenance.py",
+          "reasoning/truth_maintenance_types.py",
+          "utils/exceptions.py",
+          "utils/logging.py",
+          "utils/progress_tracker.py"
+        ]
+      }
+    },
+    {
+      "category": "invalid_span",
+      "claim_annotation_only": "Os limites da citação são válidos.",
+      "core_contract_correct": true,
+      "core_reasons": [
+        "input_rejected"
+      ],
+      "core_supported": false,
+      "engine_input_valid": false,
+      "expected_contract_supported": false,
+      "id": "span-fora-do-texto",
+      "lexical_equivalences_id": "objeto",
+      "lexical_literal_id": "objeto",
+      "question": "Qual é o objeto?",
+      "semantic_counterexample_annotation": false,
+      "semantica": {
+        "bundle_id": null,
+        "claim_scope": "citation_contract_only",
+        "derived_claims": [],
+        "engine_version": null,
+        "evaluation_completed": false,
+        "evidence_ids": [],
+        "expected_snapshot": "a1a8404e20bc146b481dad65cbe5dcccddae84ab",
+        "reasons": [
+          "invalid_checks"
+        ],
+        "ruleset_version": "radar-citation-support-v1",
+        "supported": false,
+        "verified_modules": []
+      }
+    },
+    {
+      "category": "unknown_metadata",
+      "claim_annotation_only": "Metadata arbitrária concede aprovação.",
+      "core_contract_correct": true,
+      "core_reasons": [
+        "input_rejected"
+      ],
+      "core_supported": false,
+      "engine_input_valid": false,
+      "expected_contract_supported": false,
+      "id": "metadata-desconhecida",
+      "lexical_equivalences_id": "objeto",
+      "lexical_literal_id": "objeto",
+      "question": "Qual é o objeto?",
+      "semantic_counterexample_annotation": false,
+      "semantica": {
+        "bundle_id": null,
+        "claim_scope": "citation_contract_only",
+        "derived_claims": [],
+        "engine_version": null,
+        "evaluation_completed": false,
+        "evidence_ids": [],
+        "expected_snapshot": "a1a8404e20bc146b481dad65cbe5dcccddae84ab",
+        "reasons": [
+          "invalid_checks"
+        ],
+        "ruleset_version": "radar-citation-support-v1",
+        "supported": false,
+        "verified_modules": []
+      }
+    }
+  ],
+  "citation_contract": {
+    "correct": 13,
+    "total": 13
+  },
+  "claim_scope": "citation_contract_only",
+  "fixture_sha256": "2f4cdd2df6cca8d5b9d4e87550276fade1e3a42936368d27997b981c213ed67e",
+  "fixture_version": "radar-citation-reserved-v1",
+  "limitations": [
+    "No entailment, legal quality, authentication or retrieval improvement is measured.",
+    "Review/identity/scope are synthetic trusted inputs, not verified identities.",
+    "Claims do not feed the adapter. Counterexamples deliberately remain citation-eligible."
+  ],
+  "semantic_counterexamples_still_eligible": 4,
+  "semantica_equivalence": {
+    "engine_ran": true,
+    "matching_verdicts": 11,
+    "valid_input_cases": 11
+  }
+}

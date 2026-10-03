@@ -1,0 +1,2 @@
+# Original runtime dependency, fixed to the standalone repository.
+radar-evidence-kit @ git+https://github.com/ofelipepeixoto/radar-evidence-kit.git@95f1a07e7776f666ea64086e25d05af782c72b5c

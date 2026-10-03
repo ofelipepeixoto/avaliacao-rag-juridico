@@ -1,0 +1,23 @@
+{
+  "contract": {
+    "false_negatives": 0,
+    "false_positives": 0,
+    "negative_cases": 8,
+    "positive_cases": 5,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  "fixture_sha256": "2f4cdd2df6cca8d5b9d4e87550276fade1e3a42936368d27997b981c213ed67e",
+  "limits": [
+    "Contract eligibility does not test entailment or authenticate identity.",
+    "Security inputs are trusted synthetic fixtures; these counts are not attack coverage.",
+    "Semantic labels are annotations; no LLM or semantic judge ran."
+  ],
+  "scope": "synthetic_citation_contract_only",
+  "semantic_support_limitation": {
+    "counterexample_share_of_eligible": 0.8,
+    "eligible_citations": 5,
+    "eligible_counterexamples_annotated_unsupported": 4,
+    "generated_answers_evaluated": 0
+  }
+}
