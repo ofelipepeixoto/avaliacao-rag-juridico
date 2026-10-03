@@ -59,6 +59,7 @@ class SupportEvaluation:
     ruleset_version: str = RULESET_VERSION
     expected_snapshot: str = EXPECTED_SNAPSHOT
     claim_scope: str = CLAIM_SCOPE
+    evaluation_completed: bool = False
 
     def to_dict(self) -> dict[str, object]:
         return {
@@ -70,6 +71,7 @@ class SupportEvaluation:
             "ruleset_version": self.ruleset_version,
             "expected_snapshot": self.expected_snapshot,
             "claim_scope": self.claim_scope,
+            "evaluation_completed": self.evaluation_completed,
         }
 
 
@@ -199,7 +201,7 @@ def evaluate_support(checks: object, *, evaluation_budget_ms: int = 2000) -> Sup
             return deny("engine_contract_mismatch", verified=True)
         reasons = tuple(sorted({reason for item in items for reason in item.reasons}))
         return SupportEvaluation(actual_support, reasons, evidence_ids, bundle_id,
-            derived, SUPPORTED_VERSION, tuple(sorted(_SOURCE_HASHES)))
+            derived, SUPPORTED_VERSION, tuple(sorted(_SOURCE_HASHES)), evaluation_completed=True)
     except _EngineUnavailable as error:
         return deny(error.code)
     except Exception:

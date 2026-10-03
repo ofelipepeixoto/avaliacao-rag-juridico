@@ -83,7 +83,8 @@ def compare(*, semantica=False):
         }
     valid_engine_rows = [row for row in rows if row["engine_input_valid"]]
     engine_ran = semantica and all(row["semantica"]["engine_version"] == "0.7.0"
-        and len(row["semantica"]["verified_modules"]) == 10 for row in valid_engine_rows)
+        and len(row["semantica"]["verified_modules"]) == 10
+        and row["semantica"]["evaluation_completed"] is True for row in valid_engine_rows)
     agreement = sum(row["semantica"]["supported"] == row["core_supported"]
                     for row in valid_engine_rows) if engine_ran else None
     return {

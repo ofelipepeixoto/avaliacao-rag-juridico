@@ -13,6 +13,7 @@ Na raiz de `avaliacao-rag-juridico`:
 ```sh
 python -m pip install ./packages/radar-evidence-kit
 python -m unittest discover -s packages/radar-evidence-kit/tests -v
+python -m unittest -v test_experimento_semantica.py
 python experiments/semantica/compare_reserved.py --strict
 python experiments/semantica/recibo_demo.py
 ```
@@ -112,7 +113,9 @@ Snapshot esperado: `semantica-agi/semantica` versão declarada **0.7.0**, commit
 verificados por SHA-256 antes do import; isso **não verifica o pacote inteiro,
 dependências transitivas ou a segurança do ambiente Python**. Módulos previamente
 carregados, import hooks e código local precisam pertencer ao runtime confiável.
-Ausência, versão/hash divergente, erro e resultado inconsistente recusam suporte.
+Ausência, versão/hash divergente, erro e resultado inconsistente recusam suporte. `evaluation_completed` distingue
+execução concluída de recusa técnica; o experimento exige esse campo para medir
+concordância, inclusive quando a elegibilidade esperada é negativa.
 
 O orçamento de tempo rejeita resultados atrasados; não interrompe uma thread ou
 import bloqueado. Para prazo rígido, isole a chamada em processo supervisionado.

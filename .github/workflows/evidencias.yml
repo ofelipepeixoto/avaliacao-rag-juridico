@@ -23,6 +23,7 @@ jobs:
         run: |
           python -c "import radar_evidence, sys; assert 'semantica' not in sys.modules"
           python -m unittest discover -s packages/radar-evidence-kit/tests -v
+          python -m unittest -v test_experimento_semantica.py
           python experiments/semantica/compare_reserved.py --strict --output /tmp/contratos.json
       - name: Recibo e PROV com sockets bloqueados
         run: |
@@ -62,6 +63,8 @@ jobs:
           RADAR_SEMANTICA_INTEGRATION: "1"
           SEMANTICA_DISABLE_JUPYTER_PROGRESS: "1"
         run: |
+          python experiments/semantica/verify_minimal_imports.py
           python -m unittest discover -s packages/radar-evidence-kit/tests -v
+          python -m unittest -v test_experimento_semantica.py
           python experiments/semantica/compare_reserved.py --semantica --strict --output /tmp/results-reservadas.json
           diff -u experiments/semantica/results-reservadas.json /tmp/results-reservadas.json

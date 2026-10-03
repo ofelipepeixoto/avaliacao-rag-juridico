@@ -2,9 +2,7 @@
 # SPDX-License-Identifier: MIT
 """Standard-library boundary tests; optional real-engine tests require a flag."""
 import hashlib
-import contextlib
 import importlib
-import io
 import os
 from pathlib import Path
 from tempfile import TemporaryDirectory
@@ -102,6 +100,7 @@ class AdapterBoundaryTests(unittest.TestCase):
             result = adapter.evaluate_support([eligible()])
         self.assertFalse(result.supported)
         self.assertEqual(result.reasons, ("evaluation_budget_exceeded",))
+        self.assertFalse(result.evaluation_completed)
         self.assertEqual(result.derived_claims, ())
 
     def test_engine_errors_are_generic_and_do_not_approve(self):
@@ -137,6 +136,7 @@ class RealSemanticaTests(unittest.TestCase):
         result = adapter.evaluate_support([eligible(), bad], evaluation_budget_ms=5000)
         self.assertFalse(result.supported)
         self.assertEqual(result.reasons, ("stale_revision",))
+        self.assertTrue(result.evaluation_completed)
         self.assertFalse(any(fact.startswith("BundleSupported(") for fact in result.derived_claims))
 
     def test_twenty_check_limit_and_deterministic_results(self):
@@ -146,36 +146,6 @@ class RealSemanticaTests(unittest.TestCase):
         self.assertTrue(forward.supported, forward.reasons)
         self.assertEqual(forward.to_dict(), reverse.to_dict())
         self.assertEqual(len(forward.derived_claims), 21)
-
-
-class ExperimentGateTests(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls):
-        source = Path(__file__).resolve().parents[3] / "experiments/semantica/compare_reserved.py"
-        spec = importlib.util.spec_from_file_location("radar_compare_reserved_tests", source)
-        cls.runner = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(cls.runner)
-
-    def gate(self, *, correct=13, matching=11, engine_ran=True, real=False):
-        fixture_result = {"citation_contract": {"correct": correct, "total": 13},
-            "semantica_equivalence": {"engine_ran": engine_ran,
-                "matching_verdicts": matching, "valid_input_cases": 11}}
-        arguments = ["compare_reserved.py", "--strict"] + (["--semantica"] if real else [])
-        with patch.object(self.runner, "compare", return_value=fixture_result), \
-             patch.object(sys, "argv", arguments), contextlib.redirect_stdout(io.StringIO()):
-            return self.runner.main()
-
-    def test_strict_core_regression_fails(self):
-        self.assertEqual(self.gate(correct=12), 1)
-
-    def test_strict_equivalence_regression_fails(self):
-        self.assertEqual(self.gate(matching=10, real=True), 1)
-
-    def test_missing_real_engine_has_distinct_exit_code(self):
-        self.assertEqual(self.gate(engine_ran=False, matching=None, real=True), 2)
-
-    def test_known_contract_and_equivalence_pass(self):
-        self.assertEqual(self.gate(real=True), 0)
 
 
 if __name__ == "__main__":

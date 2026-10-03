@@ -283,6 +283,7 @@
           "CitationSupported(7ecdb1ce2cdbb5b001f37cc21cff9d3ac2243ef8970c255a4f99ab7169135994)"
         ],
         "engine_version": "0.7.0",
+        "evaluation_completed": true,
         "evidence_ids": [
           "7ecdb1ce2cdbb5b001f37cc21cff9d3ac2243ef8970c255a4f99ab7169135994"
         ],
@@ -325,6 +326,7 @@
           "CitationSupported(41e87331a258251fc65502395553aaa24fb8451823f7ef98e3dbbbc1a8dbf863)"
         ],
         "engine_version": "0.7.0",
+        "evaluation_completed": true,
         "evidence_ids": [
           "41e87331a258251fc65502395553aaa24fb8451823f7ef98e3dbbbc1a8dbf863"
         ],
@@ -367,6 +369,7 @@
           "CitationSupported(b9a18b3f1da1ba889c66bd4262fe03dd89a1bc3eabd552cc4b0fde43d89ea457)"
         ],
         "engine_version": "0.7.0",
+        "evaluation_completed": true,
         "evidence_ids": [
           "b9a18b3f1da1ba889c66bd4262fe03dd89a1bc3eabd552cc4b0fde43d89ea457"
         ],
@@ -409,6 +412,7 @@
           "CitationSupported(357ffa69d50b4c68961434ce57d566bac27fbf601fe43de8552cbb564353fa32)"
         ],
         "engine_version": "0.7.0",
+        "evaluation_completed": true,
         "evidence_ids": [
           "357ffa69d50b4c68961434ce57d566bac27fbf601fe43de8552cbb564353fa32"
         ],
@@ -450,6 +454,7 @@
         "claim_scope": "citation_contract_only",
         "derived_claims": [],
         "engine_version": "0.7.0",
+        "evaluation_completed": true,
         "evidence_ids": [
           "7828b33de097fd4146d89c179f8f70b1fbfacf198f59e70678a0acd982d8bd6b"
         ],
@@ -495,6 +500,7 @@
           "CitationSupported(8337e0bdd6be2dbd2f4a150cb2c9e96db1eb3d936bef461188ed0f7600269b63)"
         ],
         "engine_version": "0.7.0",
+        "evaluation_completed": true,
         "evidence_ids": [
           "3ceae49bf3816147e1c7668bf3860fac9da9ed63b0354ee644d677137ac70bb0",
           "8337e0bdd6be2dbd2f4a150cb2c9e96db1eb3d936bef461188ed0f7600269b63"
@@ -537,6 +543,7 @@
         "claim_scope": "citation_contract_only",
         "derived_claims": [],
         "engine_version": "0.7.0",
+        "evaluation_completed": true,
         "evidence_ids": [
           "d5ae9484375e68ada91cecafec050216b60ea9ffd96604ba835f7550b372a2be"
         ],
@@ -580,6 +587,7 @@
         "claim_scope": "citation_contract_only",
         "derived_claims": [],
         "engine_version": "0.7.0",
+        "evaluation_completed": true,
         "evidence_ids": [
           "3fa283ad4660d1584af54b59f5520280cffcb570f612c8d852fcee93d2bb1142"
         ],
@@ -623,6 +631,7 @@
         "claim_scope": "citation_contract_only",
         "derived_claims": [],
         "engine_version": "0.7.0",
+        "evaluation_completed": true,
         "evidence_ids": [
           "467074f381c923eedd59088d5f2a6b2995a81be1e33c22c601376e733a5368b7"
         ],
@@ -666,6 +675,7 @@
         "claim_scope": "citation_contract_only",
         "derived_claims": [],
         "engine_version": "0.7.0",
+        "evaluation_completed": true,
         "evidence_ids": [
           "800efd97870f13a2c9e976fd7022b580025e68b8bce85137530077f5196ce65c"
         ],
@@ -709,6 +719,7 @@
         "claim_scope": "citation_contract_only",
         "derived_claims": [],
         "engine_version": "0.7.0",
+        "evaluation_completed": true,
         "evidence_ids": [
           "6c209f27d7dfe7bbc0375fcd18aa8745e8bc16a47ae435beedde58f9f2e30dd0"
         ],
@@ -752,6 +763,7 @@
         "claim_scope": "citation_contract_only",
         "derived_claims": [],
         "engine_version": null,
+        "evaluation_completed": false,
         "evidence_ids": [],
         "expected_snapshot": "a1a8404e20bc146b481dad65cbe5dcccddae84ab",
         "reasons": [
@@ -782,6 +794,7 @@
         "claim_scope": "citation_contract_only",
         "derived_claims": [],
         "engine_version": null,
+        "evaluation_completed": false,
         "evidence_ids": [],
         "expected_snapshot": "a1a8404e20bc146b481dad65cbe5dcccddae84ab",
         "reasons": [

@@ -28,6 +28,8 @@ Para o experimento real, usar um checkout separado e confiável de semantica-agi
     PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=semantica-upstream \
       python experiments/semantica/compare_reserved.py --semantica --strict \
       --output experiments/semantica/results-reservadas.json
+    PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=packages/radar-evidence-kit/src:semantica-upstream \
+      python experiments/semantica/verify_minimal_imports.py
 
 Receita real verificada em **Linux/Python 3.12**. NetworkX 3.7 declara Python >=3.12, portanto esses pins não servem para um job Python 3.11. Recomenda-se CI stdlib do core em 3.11/3.12 e job real focado em 3.12. Um conjunto para 3.11 requer resolução/teste separados, não foi inventado. Este teste via PYTHONPATH não homologa instalação completa do SDK e seus pisos/extras.
 
@@ -48,4 +50,6 @@ fixtures-reservadas.json foi definido antes da execução e não usado para ajus
 
 Os quatro contraexemplos são uma limitação demonstrada, não quatro respostas consideradas corretas. O adaptador não melhora recuperação: multa continua falso positivo lexical, e a reserva continua 2/4. Revisão antiga, pending/rejected, identidade não verificada, documento desconhecido e tenant errado são recusados pelas regras de elegibilidade do core. Este experimento não usa RAG vetorial, scoring de qualidade jurídica ou geração de resposta.
 
-Testes do adapter: 13 básicos, 4 gates do experimento e 3 reais quando ativados. Os testes originais de avaliar.py continuam 3/3. derived_claims e to_dict são determinísticos para o mesmo conjunto ordenado de checks; registros de execução/tempo ficam fora do resultado. results-reservadas.json registra a comparação, sem transmissão de dados externos. --strict falha com exit 1 quando o contrato ou equivalência regredir; --semantica sem engine validada falha com exit 2. Não exige acerto lexical além do baseline nem mascara seus erros.
+Testes do adapter: 13 básicos e 3 reais quando ativados. Seis gates específicos do experimento ficam em test_experimento_semantica.py, fora da biblioteca reutilizável. Os testes originais de avaliar.py continuam 3/3. derived_claims e to_dict são determinísticos para o mesmo conjunto ordenado de checks; registros de execução/tempo ficam fora do resultado. results-reservadas.json registra a comparação, sem transmissão de dados externos. --strict falha com exit 1 quando o contrato ou equivalência regredir; --semantica sem engine validada falha com exit 2. Não exige acerto lexical além do baseline nem mascara seus erros.
+
+O campo evaluation_completed só é true após a execução terminar dentro do orçamento e suas conclusões coincidirem com o contrato esperado. Versão e módulos verificados sozinhos não contam como execução concluída; --strict recusa falhas técnicas inclusive em casos cuja elegibilidade esperada é negativa.
