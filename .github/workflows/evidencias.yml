@@ -18,11 +18,10 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
       - name: Instalar somente o núcleo autoral
-        run: python -m pip install --no-deps ./packages/radar-evidence-kit
+        run: python -m pip install --no-deps -r requirements-evidence.txt
       - name: Verificar pacote e contratos sem motor opcional
         run: |
           python -c "import radar_evidence, sys; assert 'semantica' not in sys.modules"
-          python -m unittest discover -s packages/radar-evidence-kit/tests -v
           python -m unittest -v test_experimento_semantica.py
           python experiments/semantica/compare_reserved.py --strict --output /tmp/contratos.json
       - name: Recibo e PROV com sockets bloqueados
@@ -46,6 +45,12 @@ jobs:
           persist-credentials: false
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
+          repository: ofelipepeixoto/radar-evidence-kit
+          ref: 3127be7de1a57d3dc8d7a4d233d454e155c735ea
+          path: evidence-kit
+          persist-credentials: false
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
           repository: semantica-agi/semantica
           ref: a1a8404e20bc146b481dad65cbe5dcccddae84ab
           path: semantica-upstream
@@ -55,16 +60,16 @@ jobs:
           python-version: "3.12"
       - name: Dependências mínimas testadas do adapter
         run: |
-          python -m pip install --only-binary=:all: --no-deps -r experiments/semantica/requirements-optional.txt
+          python -m pip install --no-deps -r requirements-evidence.txt
+          python -m pip install --only-binary=:all: --no-deps -r evidence-kit/optional/requirements.txt
           python -m pip check
       - name: Regras reais fixas sem modelos ou serviços
         env:
-          PYTHONPATH: packages/radar-evidence-kit/src:semantica-upstream
+          PYTHONPATH: semantica-upstream
           RADAR_SEMANTICA_INTEGRATION: "1"
           SEMANTICA_DISABLE_JUPYTER_PROGRESS: "1"
         run: |
-          python experiments/semantica/verify_minimal_imports.py
-          python -m unittest discover -s packages/radar-evidence-kit/tests -v
+          python evidence-kit/optional/verify_minimal_imports.py
           python -m unittest -v test_experimento_semantica.py
           python experiments/semantica/compare_reserved.py --semantica --strict --output /tmp/results-reservadas.json
           diff -u experiments/semantica/results-reservadas.json /tmp/results-reservadas.json

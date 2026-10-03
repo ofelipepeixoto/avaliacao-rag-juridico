@@ -8,28 +8,41 @@ evaluate_support recebe 1–20 EvidenceChecks únicos emitidos pela aplicação 
 
 O supported refere-se **apenas à elegibilidade do contrato de citação**. Não autentica revisores, valida bytes do artefato fonte, prova entailment da resposta, detecta contradições de texto ou avalia qualidade jurídica. Um chamador Python confiável pode fabricar um check formalmente válido; frozen dataclass/hashes não autenticam sua origem. Aplicações devem gerar revisão, identidade e Scope a partir de controles confiáveis.
 
-O resultado inclui ruleset_version, claim_scope, engine_version, expected_snapshot, verified_modules, IDs e derived_claims ordenados. expected_snapshot é a origem esperada dos dez módulos em source-manifest.json; **não é prova da integridade de todo o pacote**. Dependência ausente, versão diferente de 0.7.0, bytes divergentes nesses arquivos, input inválido, erro de engine ou resultado tardio devolvem supported=False. Nenhum erro ecoa documentos, paths ou segredos de exceção.
+O resultado inclui ruleset_version, claim_scope, engine_version, expected_snapshot, verified_modules, IDs e derived_claims ordenados. expected_snapshot é a origem esperada dos dez módulos em optional/source-manifest.json do kit; **não é prova da integridade de todo o pacote**. Dependência ausente, versão diferente de 0.7.0, bytes divergentes nesses arquivos, input inválido, erro de engine ou resultado tardio devolvem supported=False. Nenhum erro ecoa documentos, paths ou segredos de exceção.
 
 evaluation_budget_ms tem default 2000, admite 10–5000 e descarta resultados que ultrapassam o orçamento nos checkpoints. Import frio do ambiente usado demorou aproximadamente 0,7 s, por isso 500 ms não era funcional nesse ambiente. Este orçamento **não interrompe** um import/call em andamento e não é deadline de processo. Para deadline rígido, o chamador deve usar worker isolado com watchdog. Além do orçamento, a contagem é limitada e as duas regras são acíclicas.
 
 ## Reproduzir sem instalar o SDK completo
 
-Testes básicos usam somente a biblioteca padrão; não importam Semantica e deixam os três testes reais explicitamente skipped:
+Instale a biblioteca autoral pelo commit fixado deste consumidor:
 
-    PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=packages/radar-evidence-kit/src \
-      python -m unittest discover -s packages/radar-evidence-kit/tests -p test_semantica_adapter.py -v
+    python -m pip install --no-deps -r requirements-evidence.txt
+    python -m unittest -v test_experimento_semantica.py
+    python experiments/semantica/compare_reserved.py --strict
+    python experiments/semantica/recibo_demo.py
 
-Para o experimento real, usar um checkout separado e confiável de semantica-agi/semantica em a1a8404e20bc146b481dad65cbe5dcccddae84ab, por exemplo no diretório semantica-upstream. Não instalar semantica[all] nem instalar o pacote upstream inteiro para esse teste. O arquivo requirements-optional.txt prende somente os imports obrigatórios observados e suas dependências no ambiente focado.
+As fontes, testes do núcleo e arquivos opcionais têm origem única em
+[ofelipepeixoto/radar-evidence-kit](https://github.com/ofelipepeixoto/radar-evidence-kit).
+Os 89 testes da biblioteca pertencem à CI desse repositório. Este consumidor
+mantém seis gates específicos, fixtures e comparação com o baseline anterior.
 
-    python -m pip install -r experiments/semantica/requirements-optional.txt
-    PYTHONDONTWRITEBYTECODE=1 RADAR_SEMANTICA_INTEGRATION=1 \
-      PYTHONPATH=packages/radar-evidence-kit/src:semantica-upstream \
-      python -m unittest discover -s packages/radar-evidence-kit/tests -p test_semantica_adapter.py -v
+Para reproduzir o experimento real, use o mesmo commit do kit indicado em
+requirements-evidence.txt e o snapshot upstream
+`a1a8404e20bc146b481dad65cbe5dcccddae84ab`. O workflow evidencias.yml registra
+ambos os checkouts. Instale as dependências mínimas de
+`evidence-kit/optional/requirements.txt` do checkout fixado e execute:
+
+    PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=semantica-upstream \
+      python evidence-kit/optional/verify_minimal_imports.py
+    PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=semantica-upstream \
+      python -m unittest -v test_experimento_semantica.py
     PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=semantica-upstream \
       python experiments/semantica/compare_reserved.py --semantica --strict \
       --output experiments/semantica/results-reservadas.json
-    PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=packages/radar-evidence-kit/src:semantica-upstream \
-      python experiments/semantica/verify_minimal_imports.py
+
+Os caminhos evidence-kit e semantica-upstream representam os checkouts
+registrados na CI; não instale o SDK completo para esta receita. A documentação
+do kit detalha a instalação independente de seu motor opcional.
 
 Receita real verificada em **Linux/Python 3.12**. NetworkX 3.7 declara Python >=3.12, portanto esses pins não servem para um job Python 3.11. Recomenda-se CI stdlib do core em 3.11/3.12 e job real focado em 3.12. Um conjunto para 3.11 requer resolução/teste separados, não foi inventado. Este teste via PYTHONPATH não homologa instalação completa do SDK e seus pisos/extras.
 

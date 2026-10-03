@@ -16,7 +16,6 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
-sys.path.insert(0, str(ROOT / "packages/radar-evidence-kit/src"))
 
 from avaliar import carregar, medir, recuperar
 from radar_evidence.checks import check_evidence

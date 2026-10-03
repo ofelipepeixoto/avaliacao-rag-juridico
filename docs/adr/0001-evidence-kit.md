@@ -1,20 +1,24 @@
 # ADR 0001 — contratos de evidência separados
 
-Data: 2026-10-03. Estado: implementação experimental em PR; extração autorizada,
-pendente de disponibilidade de criação de repositório no canal conectado.
+Data da auditoria: 2026-10-03 (UTC). Estado: biblioteca experimental extraída
+para repositório próprio em 2026-10-02 (America/Sao_Paulo); consumidores em PR.
 
 ## Decisão
 
-Vale criar `ofelipepeixoto/radar-evidence-kit`, público, MIT, versão inicial
+Foi criado `ofelipepeixoto/radar-evidence-kit`, público, MIT, versão inicial
 experimental 0.1.0: já existem dois consumidores concretos com o mesmo contrato.
-O repositório conterá esta biblioteca, testes, documentação e CI. Nenhum produto
+O repositório contém a biblioteca, testes, documentação e CI. Nenhum produto
 jurídico, UI, parser PDF, dados reais ou clone do SDK pertence a esse núcleo.
 
-Enquanto a criação não estiver concluída, `packages/radar-evidence-kit` neste
-repositório é a única fonte. O consumidor documental fixa um commit desta origem;
-não depende de um URL de repositório inexistente. Ao extrair, mover a fonte e
-trocar os pins dos dois consumidores em PRs coordenados; não manter cópias
-editáveis paralelas. Não há publicação PyPI, release estável ou merge automático.
+As fontes e testes foram extraídos sem alteração do commit
+`2fb8059d55974795c9db7bd4fa2540d4f5af5d2a` deste laboratório. A biblioteca
+em [radar-evidence-kit](https://github.com/ofelipepeixoto/radar-evidence-kit)
+é a fonte única. Ambos os consumidores fixam a mesma revisão em
+`requirements-evidence.txt`; a CI do experimento fixa essa revisão também no
+checkout dos arquivos opcionais. A cópia anterior de `packages/radar-evidence-kit`
+foi removida deste branch, preservada no histórico Git. A CI da biblioteca
+cuida dos contratos e recibos; esta CI cuida dos gates e fixtures do consumidor.
+Não há cópias editáveis paralelas, publicação PyPI ou merge automático.
 
 ## Motivo
 

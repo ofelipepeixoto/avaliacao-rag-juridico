@@ -4,10 +4,8 @@
 import hashlib
 import json
 from pathlib import Path
-import sys
 from tempfile import TemporaryDirectory
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "packages/radar-evidence-kit/src"))
 from radar_evidence import Evidence, Scope, Checkpoint, Journal, check_evidence, export_prov
 
 
