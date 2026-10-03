@@ -1,0 +1,80 @@
+{
+  "datasets": {
+    "desenvolvimento.json": {
+      "methods": {
+        "equivalencias": {
+          "abstained": 1,
+          "abstention_precision": 1.0,
+          "abstention_recall": 0.5,
+          "answerable": 6,
+          "correct_abstentions": 1,
+          "correct_citations": 6,
+          "emitted_citations": 7,
+          "precision_at_1": 0.8571428571428571,
+          "recall_at_1": 1.0,
+          "total": 8,
+          "unsupported": 2,
+          "unsupported_false_positive_rate": 0.5,
+          "wrong_citations": 1
+        },
+        "literal": {
+          "abstained": 3,
+          "abstention_precision": 0.3333333333333333,
+          "abstention_recall": 0.5,
+          "answerable": 6,
+          "correct_abstentions": 1,
+          "correct_citations": 4,
+          "emitted_citations": 5,
+          "precision_at_1": 0.8,
+          "recall_at_1": 0.6666666666666666,
+          "total": 8,
+          "unsupported": 2,
+          "unsupported_false_positive_rate": 0.5,
+          "wrong_citations": 1
+        }
+      },
+      "sha256": "034e403831051babd4f7690c19ad17da5a3f54494828409f8543c29c4b6517cb"
+    },
+    "reserva.json": {
+      "methods": {
+        "equivalencias": {
+          "abstained": 2,
+          "abstention_precision": 0.5,
+          "abstention_recall": 0.5,
+          "answerable": 2,
+          "correct_abstentions": 1,
+          "correct_citations": 1,
+          "emitted_citations": 2,
+          "precision_at_1": 0.5,
+          "recall_at_1": 0.5,
+          "total": 4,
+          "unsupported": 2,
+          "unsupported_false_positive_rate": 0.5,
+          "wrong_citations": 1
+        },
+        "literal": {
+          "abstained": 2,
+          "abstention_precision": 0.5,
+          "abstention_recall": 0.5,
+          "answerable": 2,
+          "correct_abstentions": 1,
+          "correct_citations": 1,
+          "emitted_citations": 2,
+          "precision_at_1": 0.5,
+          "recall_at_1": 0.5,
+          "total": 4,
+          "unsupported": 2,
+          "unsupported_false_positive_rate": 0.5,
+          "wrong_citations": 1
+        }
+      },
+      "sha256": "fa72eb157b1f18ef8987231d6b5ae6201ff823186f4522617fd88691a9cceeaf"
+    }
+  },
+  "limits": [
+    "No generated answer, entailment or legal correctness is evaluated.",
+    "Four reserved cases do not establish statistical generalization.",
+    "None denotes an undefined metric denominator, never a perfect score."
+  ],
+  "scope": "synthetic_top_1_retrieval_only"
+}

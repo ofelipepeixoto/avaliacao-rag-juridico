@@ -1,0 +1,12 @@
+node_modules/
+.promptfoo/
+__pycache__/
+*.py[cod]
+.venv*/
+*.egg-info/
+build/
+dist/
+*.sqlite3
+*.sqlite3-*
+evidencias.json
+checkpoint.json

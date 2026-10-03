@@ -6,6 +6,9 @@ jobs:
   avaliar:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - run: python3 -m unittest -v test_avaliar.py
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          persist-credentials: false
+      - run: python3 -m unittest -v test_avaliar.py test_metricas.py
       - run: python3 avaliar.py
+      - run: python3 metricas.py

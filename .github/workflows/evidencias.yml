@@ -1,0 +1,77 @@
+name: Contratos e recibos de evidência
+on: [push, pull_request]
+permissions:
+  contents: read
+
+jobs:
+  core:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        python: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Instalar somente o núcleo autoral
+        run: python -m pip install --no-deps -r requirements-evidence.txt
+      - name: Verificar pacote e contratos sem motor opcional
+        run: |
+          python -c "import radar_evidence, sys; assert 'semantica' not in sys.modules"
+          python -m unittest -v test_experimento_semantica.py
+          python experiments/semantica/compare_reserved.py --strict --output /tmp/contratos.json
+          python experiments/semantica/diagnosticos.py
+          python metricas.py
+      - name: Recibo e PROV com sockets bloqueados
+        run: |
+          python - <<'PY'
+          from unittest.mock import patch
+          import runpy
+          with patch('socket.socket', side_effect=AssertionError('offline test forbids sockets')):
+              result = runpy.run_path('experiments/semantica/recibo_demo.py')['run']()
+              assert result['check']['supported'] is False
+              assert result['check']['reasons'] == ['reviewer_identity_unverified']
+              assert result['checkpoint']['count'] == 1
+          print('offline synthetic receipt passed')
+          PY
+  semantica_optional:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          repository: ofelipepeixoto/radar-evidence-kit
+          ref: 95f1a07e7776f666ea64086e25d05af782c72b5c
+          path: evidence-kit
+          persist-credentials: false
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          repository: semantica-agi/semantica
+          ref: a1a8404e20bc146b481dad65cbe5dcccddae84ab
+          path: semantica-upstream
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.12"
+      - name: Dependências mínimas testadas do adapter
+        run: |
+          python -m pip install --no-deps -r requirements-evidence.txt
+          python -m pip install --only-binary=:all: --no-deps -r evidence-kit/optional/requirements.txt
+          python -m pip check
+      - name: Regras reais fixas sem modelos ou serviços
+        env:
+          PYTHONPATH: semantica-upstream
+          RADAR_SEMANTICA_INTEGRATION: "1"
+          SEMANTICA_DISABLE_JUPYTER_PROGRESS: "1"
+        run: |
+          python evidence-kit/optional/verify_minimal_imports.py
+          python -m unittest -v test_experimento_semantica.py
+          python experiments/semantica/compare_reserved.py --semantica --strict --output /tmp/results-reservadas.json
+          diff -u experiments/semantica/results-reservadas.json /tmp/results-reservadas.json
