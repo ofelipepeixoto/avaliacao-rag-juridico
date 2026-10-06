@@ -1,0 +1,279 @@
+{
+  "fixture_version": 1,
+  "cases": [
+    {
+      "id": "retirada",
+      "evidences": [
+        {
+          "document_id": "fonte-1",
+          "text": "Trecho sintético da fonte 1."
+        }
+      ],
+      "windows": [
+        {
+          "valid_from_ms": 100,
+          "withdrawn_at_ms": 200
+        }
+      ],
+      "observations_ms": [
+        99,
+        100,
+        199,
+        200,
+        201,
+        300
+      ],
+      "expected_supported": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "id": "expiracao",
+      "evidences": [
+        {
+          "document_id": "fonte-1",
+          "text": "Trecho sintético da fonte 1."
+        }
+      ],
+      "windows": [
+        {
+          "valid_from_ms": 100,
+          "valid_until_ms": 200
+        }
+      ],
+      "observations_ms": [
+        99,
+        100,
+        199,
+        200,
+        201
+      ],
+      "expected_supported": [
+        false,
+        true,
+        true,
+        false,
+        false
+      ]
+    },
+    {
+      "id": "todas-fontes-obrigatorias",
+      "evidences": [
+        {
+          "document_id": "fonte-1",
+          "text": "Trecho sintético da fonte 1."
+        },
+        {
+          "document_id": "fonte-2",
+          "text": "Trecho sintético da fonte 2."
+        }
+      ],
+      "windows": [
+        {
+          "valid_from_ms": 100,
+          "withdrawn_at_ms": 200
+        },
+        {
+          "valid_from_ms": 100,
+          "valid_until_ms": 300
+        }
+      ],
+      "observations_ms": [
+        100,
+        199,
+        200,
+        299,
+        300
+      ],
+      "expected_supported": [
+        true,
+        true,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "id": "inicio-futuro",
+      "evidences": [
+        {
+          "document_id": "fonte-1",
+          "text": "Trecho sintético da fonte 1."
+        },
+        {
+          "document_id": "fonte-2",
+          "text": "Trecho sintético da fonte 2."
+        }
+      ],
+      "windows": [
+        {
+          "valid_from_ms": 100
+        },
+        {
+          "valid_from_ms": 200
+        }
+      ],
+      "observations_ms": [
+        99,
+        100,
+        199,
+        200,
+        300
+      ],
+      "expected_supported": [
+        false,
+        false,
+        false,
+        true,
+        true
+      ]
+    },
+    {
+      "id": "retirada-no-inicio",
+      "evidences": [
+        {
+          "document_id": "fonte-1",
+          "text": "Trecho sintético da fonte 1."
+        }
+      ],
+      "windows": [
+        {
+          "valid_from_ms": 100,
+          "withdrawn_at_ms": 100
+        }
+      ],
+      "observations_ms": [
+        99,
+        100,
+        200
+      ],
+      "expected_supported": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "id": "revisao-antiga",
+      "evidences": [
+        {
+          "document_id": "fonte-1",
+          "text": "Trecho sintético da fonte 1.",
+          "revision": 1,
+          "current_revision": 2
+        }
+      ],
+      "windows": [
+        {
+          "valid_from_ms": 100
+        }
+      ],
+      "observations_ms": [
+        100,
+        200
+      ],
+      "expected_supported": [
+        false,
+        false
+      ]
+    },
+    {
+      "id": "outro-tenant",
+      "evidences": [
+        {
+          "document_id": "fonte-1",
+          "text": "Trecho sintético da fonte 1.",
+          "tenant_id": "tenant-outro-ficticio"
+        }
+      ],
+      "windows": [
+        {
+          "valid_from_ms": 100
+        }
+      ],
+      "observations_ms": [
+        100,
+        200
+      ],
+      "expected_supported": [
+        false,
+        false
+      ]
+    },
+    {
+      "id": "revisao-pendente",
+      "evidences": [
+        {
+          "document_id": "fonte-1",
+          "text": "Trecho sintético da fonte 1.",
+          "review_status": "pending"
+        }
+      ],
+      "windows": [
+        {
+          "valid_from_ms": 100
+        }
+      ],
+      "observations_ms": [
+        100,
+        200
+      ],
+      "expected_supported": [
+        false,
+        false
+      ]
+    },
+    {
+      "id": "identidade-nao-verificada",
+      "evidences": [
+        {
+          "document_id": "fonte-1",
+          "text": "Trecho sintético da fonte 1.",
+          "identity_verified": false
+        }
+      ],
+      "windows": [
+        {
+          "valid_from_ms": 100
+        }
+      ],
+      "observations_ms": [
+        100,
+        200
+      ],
+      "expected_supported": [
+        false,
+        false
+      ]
+    },
+    {
+      "id": "vigente-sem-prazo-declarado",
+      "evidences": [
+        {
+          "document_id": "fonte-1",
+          "text": "Trecho sintético da fonte 1."
+        }
+      ],
+      "windows": [
+        {
+          "valid_from_ms": 100
+        }
+      ],
+      "observations_ms": [
+        100,
+        200,
+        300
+      ],
+      "expected_supported": [
+        true,
+        true,
+        true
+      ]
+    }
+  ]
+}
