@@ -23,8 +23,9 @@ Instale a biblioteca autoral pelo commit fixado deste consumidor:
 
 As fontes, testes do núcleo e arquivos opcionais têm origem única em
 [ofelipepeixoto/radar-evidence-kit](https://github.com/ofelipepeixoto/radar-evidence-kit).
-Os 92 testes da biblioteca pertencem à CI desse repositório. Este consumidor
-mantém sete gates específicos, fixtures e comparação com o baseline anterior.
+Os testes da biblioteca pertencem à CI desse repositório. Este consumidor
+mantém os sete gates anteriores e seis novos gates de ciclo de suporte, fixtures
+e comparação com o baseline anterior.
 
 Para reproduzir o experimento real, use o mesmo commit do kit indicado em
 requirements-evidence.txt e o snapshot upstream
@@ -66,3 +67,34 @@ Os quatro contraexemplos são uma limitação demonstrada, não quatro respostas
 Testes do adapter: 13 básicos e 3 reais quando ativados. Sete gates específicos do experimento ficam em test_experimento_semantica.py, fora da biblioteca reutilizável. Os testes originais de avaliar.py continuam 3/3. derived_claims e to_dict são determinísticos para o mesmo conjunto ordenado de checks; registros de execução/tempo ficam fora do resultado. results-reservadas.json registra a comparação, sem transmissão de dados externos. --strict falha com exit 1 quando o contrato ou equivalência regredir; --semantica sem engine validada falha com exit 2. Não exige acerto lexical além do baseline nem mascara seus erros.
 
 O campo evaluation_completed só é true após a execução terminar dentro do orçamento e suas conclusões coincidirem com o contrato esperado. Versão e módulos verificados sozinhos não contam como execução concluída; --strict recusa falhas técnicas inclusive em casos cuja elegibilidade esperada é negativa.
+
+## Retirada e expiração de suporte (2026-10-06)
+
+`compare_lifecycle.py` acrescenta dez cenários sintéticos e 35 observações,
+com expectativas explícitas em `fixtures-lifecycle.json`. Compara todas as
+fontes ativas, motivos de exclusão e conclusões, além do booleano final.
+
+```sh
+python -m unittest -v test_experimento_semantica.py test_support_lifecycle.py
+python experiments/semantica/compare_lifecycle.py --strict
+# Com o checkout upstream fixado e dependências mínimas descritos acima:
+PYTHONPATH=semantica-upstream python experiments/semantica/compare_lifecycle.py \
+  --semantica --strict --output /tmp/results-lifecycle.json
+diff -u experiments/semantica/results-lifecycle.json /tmp/results-lifecycle.json
+```
+
+Resultado local com o motor real fixado: **10/10 cenários**, **35 observações**,
+frames equivalentes às regras Radar. A retirada ou expiração de uma fonte
+obrigatória retira a conclusão do conjunto. Revisão antiga, outro tenant,
+revisão pendente e identidade não verificada permanecem inelegíveis.
+
+`--strict` também preserva o contrato anterior 13/13 e os quatro contraexemplos
+semânticos conhecidos. Uma falha técnica da engine não conta como equivalência
+negativa. O relatório versionado não contém documentos reais nem medições
+de tempo da máquina que tornariam sua reprodução instável.
+
+**Decisão: manter B — STUDY.** A equivalência foi demonstrada; uma melhora
+sobre a solução determinística não foi. Não é benchmark de capacidade,
+validação jurídica, autenticação, observador persistente ou serviço em produção.
+A instalação do kit é fixada no commit desta implementação, inclusive na CI;
+nenhuma alteração no assistente documental ou outros consumidores é necessária.

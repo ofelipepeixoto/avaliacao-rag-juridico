@@ -22,8 +22,9 @@ jobs:
       - name: Verificar pacote e contratos sem motor opcional
         run: |
           python -c "import radar_evidence, sys; assert 'semantica' not in sys.modules"
-          python -m unittest -v test_experimento_semantica.py
+          python -m unittest -v test_experimento_semantica.py test_support_lifecycle.py
           python experiments/semantica/compare_reserved.py --strict --output /tmp/contratos.json
+          python experiments/semantica/compare_lifecycle.py --strict --output /tmp/lifecycle-core.json
           python experiments/semantica/diagnosticos.py
           python metricas.py
       - name: Recibo e PROV com sockets bloqueados
@@ -48,7 +49,7 @@ jobs:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
           repository: ofelipepeixoto/radar-evidence-kit
-          ref: 95f1a07e7776f666ea64086e25d05af782c72b5c
+          ref: 6701507eb328c034edfc491e1289a53e61197218
           path: evidence-kit
           persist-credentials: false
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
@@ -72,6 +73,8 @@ jobs:
           SEMANTICA_DISABLE_JUPYTER_PROGRESS: "1"
         run: |
           python evidence-kit/optional/verify_minimal_imports.py
-          python -m unittest -v test_experimento_semantica.py
+          python -m unittest -v test_experimento_semantica.py test_support_lifecycle.py
           python experiments/semantica/compare_reserved.py --semantica --strict --output /tmp/results-reservadas.json
           diff -u experiments/semantica/results-reservadas.json /tmp/results-reservadas.json
+          python experiments/semantica/compare_lifecycle.py --semantica --strict --output /tmp/results-lifecycle.json
+          diff -u experiments/semantica/results-lifecycle.json /tmp/results-lifecycle.json

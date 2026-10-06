@@ -1,0 +1,1364 @@
+{
+  "cases": [
+    {
+      "core": {
+        "claim_scope": "citation_contract_only",
+        "engine": "radar",
+        "evaluation_completed": true,
+        "frames": [
+          {
+            "active_evidence_ids": [],
+            "at_ms": 99,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "support_not_yet_valid"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [
+              "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2"
+            ],
+            "at_ms": 100,
+            "derived_claims": [
+              "BundleSupported(97075a831b0ecda68d3eb63cbc651cbd73399abdda6566b5eeb38e9de7abd074)",
+              "CitationSupported(d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2)"
+            ],
+            "excluded": [],
+            "supported": true
+          },
+          {
+            "active_evidence_ids": [
+              "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2"
+            ],
+            "at_ms": 199,
+            "derived_claims": [
+              "BundleSupported(97075a831b0ecda68d3eb63cbc651cbd73399abdda6566b5eeb38e9de7abd074)",
+              "CitationSupported(d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2)"
+            ],
+            "excluded": [],
+            "supported": true
+          },
+          {
+            "active_evidence_ids": [],
+            "at_ms": 200,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "support_withdrawn"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [],
+            "at_ms": 201,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "support_withdrawn"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [],
+            "at_ms": 300,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "support_withdrawn"
+                ]
+              }
+            ],
+            "supported": false
+          }
+        ],
+        "reasons": [],
+        "ruleset_version": "radar-support-lifecycle-v1",
+        "status": "STUDY_ONLY",
+        "study_id": "97075a831b0ecda68d3eb63cbc651cbd73399abdda6566b5eeb38e9de7abd074"
+      },
+      "core_correct": true,
+      "expected_supported": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      "id": "retirada",
+      "matching_frames": true,
+      "semantica": {
+        "claim_scope": "citation_contract_only",
+        "engine": "semantica",
+        "evaluation_completed": true,
+        "frames": [
+          {
+            "active_evidence_ids": [],
+            "at_ms": 99,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "support_not_yet_valid"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [
+              "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2"
+            ],
+            "at_ms": 100,
+            "derived_claims": [
+              "BundleSupported(97075a831b0ecda68d3eb63cbc651cbd73399abdda6566b5eeb38e9de7abd074)",
+              "CitationSupported(d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2)"
+            ],
+            "excluded": [],
+            "supported": true
+          },
+          {
+            "active_evidence_ids": [
+              "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2"
+            ],
+            "at_ms": 199,
+            "derived_claims": [
+              "BundleSupported(97075a831b0ecda68d3eb63cbc651cbd73399abdda6566b5eeb38e9de7abd074)",
+              "CitationSupported(d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2)"
+            ],
+            "excluded": [],
+            "supported": true
+          },
+          {
+            "active_evidence_ids": [],
+            "at_ms": 200,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "support_withdrawn"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [],
+            "at_ms": 201,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "support_withdrawn"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [],
+            "at_ms": 300,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "support_withdrawn"
+                ]
+              }
+            ],
+            "supported": false
+          }
+        ],
+        "reasons": [],
+        "ruleset_version": "radar-support-lifecycle-v1",
+        "status": "STUDY_ONLY",
+        "study_id": "97075a831b0ecda68d3eb63cbc651cbd73399abdda6566b5eeb38e9de7abd074"
+      }
+    },
+    {
+      "core": {
+        "claim_scope": "citation_contract_only",
+        "engine": "radar",
+        "evaluation_completed": true,
+        "frames": [
+          {
+            "active_evidence_ids": [],
+            "at_ms": 99,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "support_not_yet_valid"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [
+              "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2"
+            ],
+            "at_ms": 100,
+            "derived_claims": [
+              "BundleSupported(da4a24ece99249702f9fdfcbe0b5dc445c31aa495fb392c44f81f82eaeb9386b)",
+              "CitationSupported(d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2)"
+            ],
+            "excluded": [],
+            "supported": true
+          },
+          {
+            "active_evidence_ids": [
+              "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2"
+            ],
+            "at_ms": 199,
+            "derived_claims": [
+              "BundleSupported(da4a24ece99249702f9fdfcbe0b5dc445c31aa495fb392c44f81f82eaeb9386b)",
+              "CitationSupported(d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2)"
+            ],
+            "excluded": [],
+            "supported": true
+          },
+          {
+            "active_evidence_ids": [],
+            "at_ms": 200,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "support_expired"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [],
+            "at_ms": 201,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "support_expired"
+                ]
+              }
+            ],
+            "supported": false
+          }
+        ],
+        "reasons": [],
+        "ruleset_version": "radar-support-lifecycle-v1",
+        "status": "STUDY_ONLY",
+        "study_id": "da4a24ece99249702f9fdfcbe0b5dc445c31aa495fb392c44f81f82eaeb9386b"
+      },
+      "core_correct": true,
+      "expected_supported": [
+        false,
+        true,
+        true,
+        false,
+        false
+      ],
+      "id": "expiracao",
+      "matching_frames": true,
+      "semantica": {
+        "claim_scope": "citation_contract_only",
+        "engine": "semantica",
+        "evaluation_completed": true,
+        "frames": [
+          {
+            "active_evidence_ids": [],
+            "at_ms": 99,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "support_not_yet_valid"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [
+              "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2"
+            ],
+            "at_ms": 100,
+            "derived_claims": [
+              "BundleSupported(da4a24ece99249702f9fdfcbe0b5dc445c31aa495fb392c44f81f82eaeb9386b)",
+              "CitationSupported(d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2)"
+            ],
+            "excluded": [],
+            "supported": true
+          },
+          {
+            "active_evidence_ids": [
+              "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2"
+            ],
+            "at_ms": 199,
+            "derived_claims": [
+              "BundleSupported(da4a24ece99249702f9fdfcbe0b5dc445c31aa495fb392c44f81f82eaeb9386b)",
+              "CitationSupported(d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2)"
+            ],
+            "excluded": [],
+            "supported": true
+          },
+          {
+            "active_evidence_ids": [],
+            "at_ms": 200,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "support_expired"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [],
+            "at_ms": 201,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "support_expired"
+                ]
+              }
+            ],
+            "supported": false
+          }
+        ],
+        "reasons": [],
+        "ruleset_version": "radar-support-lifecycle-v1",
+        "status": "STUDY_ONLY",
+        "study_id": "da4a24ece99249702f9fdfcbe0b5dc445c31aa495fb392c44f81f82eaeb9386b"
+      }
+    },
+    {
+      "core": {
+        "claim_scope": "citation_contract_only",
+        "engine": "radar",
+        "evaluation_completed": true,
+        "frames": [
+          {
+            "active_evidence_ids": [
+              "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+              "f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8"
+            ],
+            "at_ms": 100,
+            "derived_claims": [
+              "BundleSupported(acb622fcf39e9d9e60c82f7d0ea20317d689496aacccb10ea7aa23fa37a5dd4a)",
+              "CitationSupported(d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2)",
+              "CitationSupported(f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8)"
+            ],
+            "excluded": [],
+            "supported": true
+          },
+          {
+            "active_evidence_ids": [
+              "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+              "f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8"
+            ],
+            "at_ms": 199,
+            "derived_claims": [
+              "BundleSupported(acb622fcf39e9d9e60c82f7d0ea20317d689496aacccb10ea7aa23fa37a5dd4a)",
+              "CitationSupported(d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2)",
+              "CitationSupported(f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8)"
+            ],
+            "excluded": [],
+            "supported": true
+          },
+          {
+            "active_evidence_ids": [
+              "f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8"
+            ],
+            "at_ms": 200,
+            "derived_claims": [
+              "CitationSupported(f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8)"
+            ],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "support_withdrawn"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [
+              "f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8"
+            ],
+            "at_ms": 299,
+            "derived_claims": [
+              "CitationSupported(f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8)"
+            ],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "support_withdrawn"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [],
+            "at_ms": 300,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "support_withdrawn"
+                ]
+              },
+              {
+                "evidence_id": "f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8",
+                "reasons": [
+                  "support_expired"
+                ]
+              }
+            ],
+            "supported": false
+          }
+        ],
+        "reasons": [],
+        "ruleset_version": "radar-support-lifecycle-v1",
+        "status": "STUDY_ONLY",
+        "study_id": "acb622fcf39e9d9e60c82f7d0ea20317d689496aacccb10ea7aa23fa37a5dd4a"
+      },
+      "core_correct": true,
+      "expected_supported": [
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      "id": "todas-fontes-obrigatorias",
+      "matching_frames": true,
+      "semantica": {
+        "claim_scope": "citation_contract_only",
+        "engine": "semantica",
+        "evaluation_completed": true,
+        "frames": [
+          {
+            "active_evidence_ids": [
+              "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+              "f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8"
+            ],
+            "at_ms": 100,
+            "derived_claims": [
+              "BundleSupported(acb622fcf39e9d9e60c82f7d0ea20317d689496aacccb10ea7aa23fa37a5dd4a)",
+              "CitationSupported(d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2)",
+              "CitationSupported(f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8)"
+            ],
+            "excluded": [],
+            "supported": true
+          },
+          {
+            "active_evidence_ids": [
+              "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+              "f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8"
+            ],
+            "at_ms": 199,
+            "derived_claims": [
+              "BundleSupported(acb622fcf39e9d9e60c82f7d0ea20317d689496aacccb10ea7aa23fa37a5dd4a)",
+              "CitationSupported(d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2)",
+              "CitationSupported(f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8)"
+            ],
+            "excluded": [],
+            "supported": true
+          },
+          {
+            "active_evidence_ids": [
+              "f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8"
+            ],
+            "at_ms": 200,
+            "derived_claims": [
+              "CitationSupported(f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8)"
+            ],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "support_withdrawn"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [
+              "f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8"
+            ],
+            "at_ms": 299,
+            "derived_claims": [
+              "CitationSupported(f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8)"
+            ],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "support_withdrawn"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [],
+            "at_ms": 300,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "support_withdrawn"
+                ]
+              },
+              {
+                "evidence_id": "f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8",
+                "reasons": [
+                  "support_expired"
+                ]
+              }
+            ],
+            "supported": false
+          }
+        ],
+        "reasons": [],
+        "ruleset_version": "radar-support-lifecycle-v1",
+        "status": "STUDY_ONLY",
+        "study_id": "acb622fcf39e9d9e60c82f7d0ea20317d689496aacccb10ea7aa23fa37a5dd4a"
+      }
+    },
+    {
+      "core": {
+        "claim_scope": "citation_contract_only",
+        "engine": "radar",
+        "evaluation_completed": true,
+        "frames": [
+          {
+            "active_evidence_ids": [],
+            "at_ms": 99,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "support_not_yet_valid"
+                ]
+              },
+              {
+                "evidence_id": "f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8",
+                "reasons": [
+                  "support_not_yet_valid"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [
+              "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2"
+            ],
+            "at_ms": 100,
+            "derived_claims": [
+              "CitationSupported(d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2)"
+            ],
+            "excluded": [
+              {
+                "evidence_id": "f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8",
+                "reasons": [
+                  "support_not_yet_valid"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [
+              "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2"
+            ],
+            "at_ms": 199,
+            "derived_claims": [
+              "CitationSupported(d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2)"
+            ],
+            "excluded": [
+              {
+                "evidence_id": "f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8",
+                "reasons": [
+                  "support_not_yet_valid"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [
+              "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+              "f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8"
+            ],
+            "at_ms": 200,
+            "derived_claims": [
+              "BundleSupported(b6299a0cfb74728bd0b17e5fce7522f133d28a1a4ca811e3557be6a250853aab)",
+              "CitationSupported(d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2)",
+              "CitationSupported(f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8)"
+            ],
+            "excluded": [],
+            "supported": true
+          },
+          {
+            "active_evidence_ids": [
+              "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+              "f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8"
+            ],
+            "at_ms": 300,
+            "derived_claims": [
+              "BundleSupported(b6299a0cfb74728bd0b17e5fce7522f133d28a1a4ca811e3557be6a250853aab)",
+              "CitationSupported(d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2)",
+              "CitationSupported(f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8)"
+            ],
+            "excluded": [],
+            "supported": true
+          }
+        ],
+        "reasons": [],
+        "ruleset_version": "radar-support-lifecycle-v1",
+        "status": "STUDY_ONLY",
+        "study_id": "b6299a0cfb74728bd0b17e5fce7522f133d28a1a4ca811e3557be6a250853aab"
+      },
+      "core_correct": true,
+      "expected_supported": [
+        false,
+        false,
+        false,
+        true,
+        true
+      ],
+      "id": "inicio-futuro",
+      "matching_frames": true,
+      "semantica": {
+        "claim_scope": "citation_contract_only",
+        "engine": "semantica",
+        "evaluation_completed": true,
+        "frames": [
+          {
+            "active_evidence_ids": [],
+            "at_ms": 99,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "support_not_yet_valid"
+                ]
+              },
+              {
+                "evidence_id": "f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8",
+                "reasons": [
+                  "support_not_yet_valid"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [
+              "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2"
+            ],
+            "at_ms": 100,
+            "derived_claims": [
+              "CitationSupported(d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2)"
+            ],
+            "excluded": [
+              {
+                "evidence_id": "f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8",
+                "reasons": [
+                  "support_not_yet_valid"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [
+              "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2"
+            ],
+            "at_ms": 199,
+            "derived_claims": [
+              "CitationSupported(d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2)"
+            ],
+            "excluded": [
+              {
+                "evidence_id": "f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8",
+                "reasons": [
+                  "support_not_yet_valid"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [
+              "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+              "f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8"
+            ],
+            "at_ms": 200,
+            "derived_claims": [
+              "BundleSupported(b6299a0cfb74728bd0b17e5fce7522f133d28a1a4ca811e3557be6a250853aab)",
+              "CitationSupported(d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2)",
+              "CitationSupported(f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8)"
+            ],
+            "excluded": [],
+            "supported": true
+          },
+          {
+            "active_evidence_ids": [
+              "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+              "f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8"
+            ],
+            "at_ms": 300,
+            "derived_claims": [
+              "BundleSupported(b6299a0cfb74728bd0b17e5fce7522f133d28a1a4ca811e3557be6a250853aab)",
+              "CitationSupported(d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2)",
+              "CitationSupported(f628075804cc12d4d61075f1af424bb03fb1c2cb7f068b61e3d7b20ca2c022a8)"
+            ],
+            "excluded": [],
+            "supported": true
+          }
+        ],
+        "reasons": [],
+        "ruleset_version": "radar-support-lifecycle-v1",
+        "status": "STUDY_ONLY",
+        "study_id": "b6299a0cfb74728bd0b17e5fce7522f133d28a1a4ca811e3557be6a250853aab"
+      }
+    },
+    {
+      "core": {
+        "claim_scope": "citation_contract_only",
+        "engine": "radar",
+        "evaluation_completed": true,
+        "frames": [
+          {
+            "active_evidence_ids": [],
+            "at_ms": 99,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "support_not_yet_valid"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [],
+            "at_ms": 100,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "support_withdrawn"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [],
+            "at_ms": 200,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "support_withdrawn"
+                ]
+              }
+            ],
+            "supported": false
+          }
+        ],
+        "reasons": [],
+        "ruleset_version": "radar-support-lifecycle-v1",
+        "status": "STUDY_ONLY",
+        "study_id": "f91a6d6eca643f03f5a4953c17a3a98122fdb7a5618e209639010df830ab2a67"
+      },
+      "core_correct": true,
+      "expected_supported": [
+        false,
+        false,
+        false
+      ],
+      "id": "retirada-no-inicio",
+      "matching_frames": true,
+      "semantica": {
+        "claim_scope": "citation_contract_only",
+        "engine": "semantica",
+        "evaluation_completed": true,
+        "frames": [
+          {
+            "active_evidence_ids": [],
+            "at_ms": 99,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "support_not_yet_valid"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [],
+            "at_ms": 100,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "support_withdrawn"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [],
+            "at_ms": 200,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "support_withdrawn"
+                ]
+              }
+            ],
+            "supported": false
+          }
+        ],
+        "reasons": [],
+        "ruleset_version": "radar-support-lifecycle-v1",
+        "status": "STUDY_ONLY",
+        "study_id": "f91a6d6eca643f03f5a4953c17a3a98122fdb7a5618e209639010df830ab2a67"
+      }
+    },
+    {
+      "core": {
+        "claim_scope": "citation_contract_only",
+        "engine": "radar",
+        "evaluation_completed": true,
+        "frames": [
+          {
+            "active_evidence_ids": [],
+            "at_ms": 100,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "stale_revision"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [],
+            "at_ms": 200,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "stale_revision"
+                ]
+              }
+            ],
+            "supported": false
+          }
+        ],
+        "reasons": [],
+        "ruleset_version": "radar-support-lifecycle-v1",
+        "status": "STUDY_ONLY",
+        "study_id": "5361e0e014297d2859b7eb6b516ede9f65aa64ed955f024982b04bf3cae53c5e"
+      },
+      "core_correct": true,
+      "expected_supported": [
+        false,
+        false
+      ],
+      "id": "revisao-antiga",
+      "matching_frames": true,
+      "semantica": {
+        "claim_scope": "citation_contract_only",
+        "engine": "semantica",
+        "evaluation_completed": true,
+        "frames": [
+          {
+            "active_evidence_ids": [],
+            "at_ms": 100,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "stale_revision"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [],
+            "at_ms": 200,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2",
+                "reasons": [
+                  "stale_revision"
+                ]
+              }
+            ],
+            "supported": false
+          }
+        ],
+        "reasons": [],
+        "ruleset_version": "radar-support-lifecycle-v1",
+        "status": "STUDY_ONLY",
+        "study_id": "5361e0e014297d2859b7eb6b516ede9f65aa64ed955f024982b04bf3cae53c5e"
+      }
+    },
+    {
+      "core": {
+        "claim_scope": "citation_contract_only",
+        "engine": "radar",
+        "evaluation_completed": true,
+        "frames": [
+          {
+            "active_evidence_ids": [],
+            "at_ms": 100,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "2faf1956a830ace4cc82580d00acebfb427702f11d9a164d10c2b11444964ef8",
+                "reasons": [
+                  "tenant_scope_mismatch"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [],
+            "at_ms": 200,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "2faf1956a830ace4cc82580d00acebfb427702f11d9a164d10c2b11444964ef8",
+                "reasons": [
+                  "tenant_scope_mismatch"
+                ]
+              }
+            ],
+            "supported": false
+          }
+        ],
+        "reasons": [],
+        "ruleset_version": "radar-support-lifecycle-v1",
+        "status": "STUDY_ONLY",
+        "study_id": "9029fbf863348cfcec7005738c71d6c22c5ebef2c07b51f2711eb1e6f117161e"
+      },
+      "core_correct": true,
+      "expected_supported": [
+        false,
+        false
+      ],
+      "id": "outro-tenant",
+      "matching_frames": true,
+      "semantica": {
+        "claim_scope": "citation_contract_only",
+        "engine": "semantica",
+        "evaluation_completed": true,
+        "frames": [
+          {
+            "active_evidence_ids": [],
+            "at_ms": 100,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "2faf1956a830ace4cc82580d00acebfb427702f11d9a164d10c2b11444964ef8",
+                "reasons": [
+                  "tenant_scope_mismatch"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [],
+            "at_ms": 200,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "2faf1956a830ace4cc82580d00acebfb427702f11d9a164d10c2b11444964ef8",
+                "reasons": [
+                  "tenant_scope_mismatch"
+                ]
+              }
+            ],
+            "supported": false
+          }
+        ],
+        "reasons": [],
+        "ruleset_version": "radar-support-lifecycle-v1",
+        "status": "STUDY_ONLY",
+        "study_id": "9029fbf863348cfcec7005738c71d6c22c5ebef2c07b51f2711eb1e6f117161e"
+      }
+    },
+    {
+      "core": {
+        "claim_scope": "citation_contract_only",
+        "engine": "radar",
+        "evaluation_completed": true,
+        "frames": [
+          {
+            "active_evidence_ids": [],
+            "at_ms": 100,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "c50440209eb7be41b70116c8db1b422e6b902016082b924f33f4ddede5bddab2",
+                "reasons": [
+                  "review_pending"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [],
+            "at_ms": 200,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "c50440209eb7be41b70116c8db1b422e6b902016082b924f33f4ddede5bddab2",
+                "reasons": [
+                  "review_pending"
+                ]
+              }
+            ],
+            "supported": false
+          }
+        ],
+        "reasons": [],
+        "ruleset_version": "radar-support-lifecycle-v1",
+        "status": "STUDY_ONLY",
+        "study_id": "ad5188c76c6568905c755c36d71341d992d179f5bd5d7406cf1d7770c6630845"
+      },
+      "core_correct": true,
+      "expected_supported": [
+        false,
+        false
+      ],
+      "id": "revisao-pendente",
+      "matching_frames": true,
+      "semantica": {
+        "claim_scope": "citation_contract_only",
+        "engine": "semantica",
+        "evaluation_completed": true,
+        "frames": [
+          {
+            "active_evidence_ids": [],
+            "at_ms": 100,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "c50440209eb7be41b70116c8db1b422e6b902016082b924f33f4ddede5bddab2",
+                "reasons": [
+                  "review_pending"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [],
+            "at_ms": 200,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "c50440209eb7be41b70116c8db1b422e6b902016082b924f33f4ddede5bddab2",
+                "reasons": [
+                  "review_pending"
+                ]
+              }
+            ],
+            "supported": false
+          }
+        ],
+        "reasons": [],
+        "ruleset_version": "radar-support-lifecycle-v1",
+        "status": "STUDY_ONLY",
+        "study_id": "ad5188c76c6568905c755c36d71341d992d179f5bd5d7406cf1d7770c6630845"
+      }
+    },
+    {
+      "core": {
+        "claim_scope": "citation_contract_only",
+        "engine": "radar",
+        "evaluation_completed": true,
+        "frames": [
+          {
+            "active_evidence_ids": [],
+            "at_ms": 100,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "2eef15b5a80a6a06b56417a922dbef8fec29d6c4dde982923285c5c61cc55c1e",
+                "reasons": [
+                  "reviewer_identity_unverified"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [],
+            "at_ms": 200,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "2eef15b5a80a6a06b56417a922dbef8fec29d6c4dde982923285c5c61cc55c1e",
+                "reasons": [
+                  "reviewer_identity_unverified"
+                ]
+              }
+            ],
+            "supported": false
+          }
+        ],
+        "reasons": [],
+        "ruleset_version": "radar-support-lifecycle-v1",
+        "status": "STUDY_ONLY",
+        "study_id": "bcb41b0d5d633c1b8aba87119aed531322db89dbf9ce909215ff9b5ecbc035a8"
+      },
+      "core_correct": true,
+      "expected_supported": [
+        false,
+        false
+      ],
+      "id": "identidade-nao-verificada",
+      "matching_frames": true,
+      "semantica": {
+        "claim_scope": "citation_contract_only",
+        "engine": "semantica",
+        "evaluation_completed": true,
+        "frames": [
+          {
+            "active_evidence_ids": [],
+            "at_ms": 100,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "2eef15b5a80a6a06b56417a922dbef8fec29d6c4dde982923285c5c61cc55c1e",
+                "reasons": [
+                  "reviewer_identity_unverified"
+                ]
+              }
+            ],
+            "supported": false
+          },
+          {
+            "active_evidence_ids": [],
+            "at_ms": 200,
+            "derived_claims": [],
+            "excluded": [
+              {
+                "evidence_id": "2eef15b5a80a6a06b56417a922dbef8fec29d6c4dde982923285c5c61cc55c1e",
+                "reasons": [
+                  "reviewer_identity_unverified"
+                ]
+              }
+            ],
+            "supported": false
+          }
+        ],
+        "reasons": [],
+        "ruleset_version": "radar-support-lifecycle-v1",
+        "status": "STUDY_ONLY",
+        "study_id": "bcb41b0d5d633c1b8aba87119aed531322db89dbf9ce909215ff9b5ecbc035a8"
+      }
+    },
+    {
+      "core": {
+        "claim_scope": "citation_contract_only",
+        "engine": "radar",
+        "evaluation_completed": true,
+        "frames": [
+          {
+            "active_evidence_ids": [
+              "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2"
+            ],
+            "at_ms": 100,
+            "derived_claims": [
+              "BundleSupported(03b70048fc1c48c7e2df59a1f574e1d0b482ee90597f5bbacb3f57542e0d9a85)",
+              "CitationSupported(d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2)"
+            ],
+            "excluded": [],
+            "supported": true
+          },
+          {
+            "active_evidence_ids": [
+              "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2"
+            ],
+            "at_ms": 200,
+            "derived_claims": [
+              "BundleSupported(03b70048fc1c48c7e2df59a1f574e1d0b482ee90597f5bbacb3f57542e0d9a85)",
+              "CitationSupported(d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2)"
+            ],
+            "excluded": [],
+            "supported": true
+          },
+          {
+            "active_evidence_ids": [
+              "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2"
+            ],
+            "at_ms": 300,
+            "derived_claims": [
+              "BundleSupported(03b70048fc1c48c7e2df59a1f574e1d0b482ee90597f5bbacb3f57542e0d9a85)",
+              "CitationSupported(d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2)"
+            ],
+            "excluded": [],
+            "supported": true
+          }
+        ],
+        "reasons": [],
+        "ruleset_version": "radar-support-lifecycle-v1",
+        "status": "STUDY_ONLY",
+        "study_id": "03b70048fc1c48c7e2df59a1f574e1d0b482ee90597f5bbacb3f57542e0d9a85"
+      },
+      "core_correct": true,
+      "expected_supported": [
+        true,
+        true,
+        true
+      ],
+      "id": "vigente-sem-prazo-declarado",
+      "matching_frames": true,
+      "semantica": {
+        "claim_scope": "citation_contract_only",
+        "engine": "semantica",
+        "evaluation_completed": true,
+        "frames": [
+          {
+            "active_evidence_ids": [
+              "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2"
+            ],
+            "at_ms": 100,
+            "derived_claims": [
+              "BundleSupported(03b70048fc1c48c7e2df59a1f574e1d0b482ee90597f5bbacb3f57542e0d9a85)",
+              "CitationSupported(d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2)"
+            ],
+            "excluded": [],
+            "supported": true
+          },
+          {
+            "active_evidence_ids": [
+              "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2"
+            ],
+            "at_ms": 200,
+            "derived_claims": [
+              "BundleSupported(03b70048fc1c48c7e2df59a1f574e1d0b482ee90597f5bbacb3f57542e0d9a85)",
+              "CitationSupported(d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2)"
+            ],
+            "excluded": [],
+            "supported": true
+          },
+          {
+            "active_evidence_ids": [
+              "d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2"
+            ],
+            "at_ms": 300,
+            "derived_claims": [
+              "BundleSupported(03b70048fc1c48c7e2df59a1f574e1d0b482ee90597f5bbacb3f57542e0d9a85)",
+              "CitationSupported(d4c8df89acdd4ade969578bd39fc1de17e1b8faede08060b78340b0a6a4950c2)"
+            ],
+            "excluded": [],
+            "supported": true
+          }
+        ],
+        "reasons": [],
+        "ruleset_version": "radar-support-lifecycle-v1",
+        "status": "STUDY_ONLY",
+        "study_id": "03b70048fc1c48c7e2df59a1f574e1d0b482ee90597f5bbacb3f57542e0d9a85"
+      }
+    }
+  ],
+  "claim_scope": "citation_contract_only",
+  "fixture_sha256": "b7bd9ef391e74c6dd89e5d7d4b278774a3d7aa66efe11908ecafa83a43cfedf0",
+  "fixture_version": 1,
+  "lifecycle_contract": {
+    "correct_cases": 10,
+    "total_cases": 10,
+    "total_observations": 35
+  },
+  "limitations": [
+    "Synthetic trusted backend inputs; no authentication or production homologation.",
+    "All sources are required; no alternative-support or semantic entailment policy.",
+    "Matching deterministic rules does not demonstrate a retrieval or legal-quality gain.",
+    "No persistent watcher, database mutation, MCP server, n8n activation or paid provider."
+  ],
+  "reserved_contract": {
+    "correct": 13,
+    "total": 13
+  },
+  "ruleset_version": "radar-support-lifecycle-v1",
+  "semantic_counterexamples_still_eligible": 4,
+  "semantica_equivalence": {
+    "engine_ran": true,
+    "expected_source_snapshot": "a1a8404e20bc146b481dad65cbe5dcccddae84ab",
+    "expected_version": "0.7.0",
+    "matching_cases": 10
+  },
+  "status": "STUDY_ONLY"
+}
