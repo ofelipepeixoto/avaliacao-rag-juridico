@@ -136,3 +136,7 @@ Gitleaks fixado, fixtures e scan do histórico completo disponível estão
 documentados em [docs/segredos-ci.md](docs/segredos-ci.md). O job privilegiado
 usa apenas script/política da base confiável e lê a PR como dados; seu bootstrap
 não equivale a check obrigatório já homologado.
+
+## Estudo legislativo opcional
+
+[Consumo de replay por família/versão](experiments/legislativo/README.md), com pacote sintético fixado por hash, métricas existentes e revisão pendente. Não avalia legislação real ou texto gerado por LLM.

@@ -1,0 +1,13 @@
+{
+  "schema": "radar-legislative-source/v1",
+  "producer_repository": "https://github.com/ofelipepeixoto/laboratorio-busca-rag",
+  "producer_commit": "3872f098fa8a5632cdfcd23a0250c8fe805cd4af",
+  "producer_url": "https://github.com/ofelipepeixoto/laboratorio-busca-rag/tree/3872f098fa8a5632cdfcd23a0250c8fe805cd4af/studies/legislativo",
+  "generation_command": "python3 -m studies.legislativo.run --output /NEW/fixture-package.json",
+  "canonical_sha256": "1d9034bdd2d6448c35733664099cb0e25709fb89e282db809e1c0ebe3171e347",
+  "synthetic_only": true,
+  "upstream_study_repository": "https://github.com/BaruqueRodrigues/llm-legislativo",
+  "upstream_study_commit": "6951114da14782ae1433a19f2c4bd1d2442f0ccb",
+  "review_status": "pending",
+  "authorization_to_execute": false
+}
