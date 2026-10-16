@@ -22,7 +22,7 @@ jobs:
       - name: Verificar pacote e contratos sem motor opcional
         run: |
           python -c "import radar_evidence, sys; assert 'semantica' not in sys.modules"
-          python -m unittest -v test_experimento_semantica.py
+          python -m unittest -v test_experimento_semantica.py test_legislativo_replay.py
           python experiments/semantica/compare_reserved.py --strict --output /tmp/contratos.json
           python experiments/semantica/diagnosticos.py
           python metricas.py
